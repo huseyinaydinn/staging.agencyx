@@ -2,7 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import { IoGitMergeOutline, IoStatsChart } from 'react-icons/io5';
 import { GiSpeedometer } from 'react-icons/gi'; 
-import { RiChatVoiceAiLine } from 'react-icons/ri';
+import { RiChatVoiceAiLine } from 'react-icons/ri'; 
+import './ChooseScenario.css';
 
 const page = () => {
   return (
@@ -15,7 +16,7 @@ const page = () => {
         {/* Sol Kolon */}
         <div className="w-full md:w-1/2 flex flex-col gap-4">
           {/* Hotel Card - 2h */}
-          <div className="bg-gray-950 rounded-2xl shadow-lg p-5 flex flex-col items-start gap-4 h-[320px] border border-[#23252C] relative overflow-hidden hover:scale-101 transition-all duration-300">
+          <div className="ScenarioCard bg-gray-950 rounded-2xl shadow-lg p-5 flex flex-col items-start gap-4 h-[320px] border border-[#23252C] hover:border-green-600 relative overflow-hidden hover:scale-101 transition-all duration-300">
             {/* Arka plan görseli */}
             <div className="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none select-none" style={{ backgroundImage: "url('/ChooseScenario/cardbackground.png')" }} />
             {/* Koyu overlay */}
@@ -44,7 +45,7 @@ const page = () => {
           </div>
 
           {/* Boost Productivity Card - h */}
-          <div className="bg-gray-950 rounded-2xl shadow-lg p-5 gap-4 flex flex-col h-[140px] border border-[#23252C] relative overflow-hidden hover:scale-101 transition-all duration-300">
+          <div className="ScenarioCard bg-gray-950 rounded-2xl shadow-lg p-5 gap-4 flex flex-col h-[140px] border border-[#23252C] hover:border-green-600 relative overflow-hidden hover:scale-101 transition-all duration-300">
             <div className="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none select-none" style={{ backgroundImage: "url('/ChooseScenario/cardbackground.png')" }} />
             <div className="absolute inset-0 bg-black/30 pointer-events-none select-none" />
             <div className="relative z-10 w-full flex flex-col items-start gap-4 h-full">
@@ -64,7 +65,7 @@ const page = () => {
         {/* Sağ Kolon */}
         <div className="w-full md:w-1/2 flex flex-col gap-4">
           {/* Agency Card - h */}
-          <div className="bg-gray-950 rounded-2xl shadow-lg p-5 gap-4 flex flex-col h-[140px] border border-[#23252C] relative overflow-hidden hover:scale-101 transition-all duration-300">
+          <div className="ScenarioCard bg-gray-950 rounded-2xl shadow-lg p-5 gap-4 flex flex-col h-[140px] border border-[#23252C] hover:border-green-600 relative overflow-hidden hover:scale-101 transition-all duration-300">
             <div className="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none select-none" style={{ backgroundImage: "url('/ChooseScenario/cardbackground.png')" }} />
             <div className="absolute inset-0 bg-black/30 pointer-events-none select-none" />
             <div className="relative z-10 w-full flex flex-col items-start gap-4 h-full">
@@ -81,7 +82,7 @@ const page = () => {
           </div>
 
           {/* Finance Card - 2h */}
-          <div className="bg-gray-950 rounded-2xl shadow-lg pt-5 pl-5 pr-5 gap-4 flex flex-col justify-between h-[320px] border border-[#23252C] relative overflow-hidden hover:scale-101 transition-all duration-300">
+          <div className="ScenarioCard bg-gray-950 rounded-2xl shadow-lg pt-5 pl-5 pr-5 gap-4 flex flex-col justify-between h-[320px] border border-[#23252C] hover:border-green-600 relative overflow-hidden hover:scale-101 transition-all duration-300">
             <div className="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none select-none" style={{ backgroundImage: "url('/ChooseScenario/cardbackground.png')" }} />
             <div className="absolute inset-0 bg-black/30 pointer-events-none select-none" />
             <div className="relative z-10 w-full flex flex-col items-start gap-4 h-full">

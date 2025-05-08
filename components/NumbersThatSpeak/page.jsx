@@ -2,6 +2,7 @@ import React from 'react'
 import { LuPhoneCall } from 'react-icons/lu'
 import { GoGift } from 'react-icons/go'
 import { TfiAlarmClock } from 'react-icons/tfi'
+import './NumbersThatSpeakCardEffect.css'
 
 const stats = [
   {
@@ -28,22 +29,32 @@ const stats = [
 
 const page = () => {
   return (
-    <section className="flex flex-col items-center justify-center py-12 md:py-20 px-4 bg-black">
+    <section className="hero-bg flex flex-col items-center justify-center min-h-screen overflow-hidden pt-2 md:pt-12 pb-10 px-4 bg-black relative gap-5">
+              <div className="stars">
+          <div className="star"></div>
+          <div className="star"></div>
+
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+
+          <div className="star"></div>
+        </div>
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight mb-10 bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent">
         Numbers that speak
       </h2>
-      <div className="flex flex-col md:flex-row gap-7 w-full max-w-5xl justify-center items-stretch">
+      <div className="flex flex-col md:flex-row gap-7 w-full max-w-5xl justify-center items-stretch py-6 px-2">
         {stats.map((stat, idx) => (
           <div
             key={stat.label}
-            className="w-full bg-gradient-to-br from-[#191C22] to-[#101217] border border-[#232732] rounded-xl py-6 px-7 flex items-center justify-start gap-4 shadow min-w-[220px] max-w-sm mx-auto hover:scale-105 transition-all duration-400"
+            className="card bg-gradient-to-br from-[#191C22] to-[#101217] border border-[#232732] rounded-xl px-2 flex items-center justify-start gap-3 shadow mx-auto hover:scale-105 transition-all duration-400"
           >
-            <div className="flex items-center justify-center bg-[#212530] rounded-lg w-10 h-10 min-w-12 ">
+            <div className="flex items-center justify-center bg-[#212530] rounded-lg w-8 h-8 min-w-8">
               {stat.icon}
             </div>
             <div className="flex flex-col justify-center">
-              <div className="text-2xl font-semibold text-white mb-1">{stat.value}</div>
-              <div className="text-lg text-white/60">{stat.label}</div>
+              <div className="text-xl font-semibold text-white mb-1">{stat.value}</div>
+              <div className="text-base text-white/60">{stat.label}</div>
             </div>
           </div>
         ))}

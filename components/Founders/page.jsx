@@ -4,7 +4,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaLinkedin, FaInstagram, FaGithub, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "swiper/css";
-import Link from "next/link";
 
 const founders = [
   {
@@ -57,8 +56,11 @@ export default function Founders() {
           Now it’s yours to use — and scale with.
         </h3>
         <div className="relative flex items-center">
-          <button className="founder-swiper-prev absolute left-[-10px] top-1/2 -translate-y-1/2 z-20 text-white rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow-md hover:scale-110 transition xl:hidden">
-            <FaChevronLeft />
+          <button className="custom-prev flex absolute left-2 box-shadow-lg bg-transparent text-transparent top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border items-center justify-center transition">
+  <FaChevronLeft className="text-[#5af5f0]" />
+</button>
+          <button className="custom-next flex absolute right-4 box-shadow-lg bg-transparent text-transparent top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center transition">
+            <FaChevronRight className="text-[#5af5f0]" />
           </button>
           <Swiper
             spaceBetween={8}
@@ -70,8 +72,8 @@ export default function Founders() {
               1280: { slidesPerView: 4 },
             }}
             navigation={{
-              nextEl: '.founder-swiper-next',
-              prevEl: '.founder-swiper-prev',
+              prevEl: '.custom-prev',
+              nextEl: '.custom-next'
             }}
           >
             {founders.map((founder, idx) => {
@@ -130,9 +132,7 @@ export default function Founders() {
             );
           })}
           </Swiper>
-          <button className="founder-swiper-next absolute right-[-10px] top-1/2 -translate-y-1/2 z-20 cursor-pointer text-white rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow-md hover:scale-110 transition xl:hidden">
-            <FaChevronRight />
-          </button>   
+          
         </div>
       </div>
     </section>

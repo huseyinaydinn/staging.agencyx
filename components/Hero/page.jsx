@@ -4,6 +4,9 @@ import { useState } from "react";
 import Image from "next/image";
 import HeroImage from "../../public/HeroImage.png";
 import { CiMicrophoneOn } from "react-icons/ci";
+import "./Hero.css";
+import "./HeroButtonEffect.css";
+import "./StarBackground.css";
 
 export default function LandingTR() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,15 +14,30 @@ export default function LandingTR() {
   return (
     <>
       {/* Hero Section */}
-      <section className=" flex flex-col items-center justify-center min-h-screen overflow-hidden pt-24 md:pt-32 pb-10 px-4 bg-black relative gap-12">
+      <section className="hero-bg el flex flex-col items-center justify-center min-h-screen overflow-hidden pt-24 md:pt-32 pb-10 px-4 bg-black relative gap-12">
+        <div className="stars">
+          <div className="star"></div>
+          <div className="star"></div>
+
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+
+          <div className="star"></div>
+        </div>
         {/* Badge */}
-        <div className="flex flex-col items-center gap-9">
-          <div className="flex flex-row flex-nowrap items-center border-t border-b px-4 py-2 border-[#313233] bg-gray-950 rounded-full cursor-pointer hover:scale-105 transition-all duration-400">
-          <CiMicrophoneOn className="bg-blue-500 rounded-full w-8 h-8"/><span className="inline-block px-4 py-1 rounded-full  text-white font-extralight text-lg shadow">
-          Audiex is here! Ask questions. Ask a pro
-          </span>
-          </div>
-          <div className="flex flex-col items-center gap-4">
+        <div className=" flex flex-col items-center gap-9">
+        <div className="heroButtonEffect" style={{display:'inline-flex'}}>
+  <button className="heroButtonEffect relative overflow-hidden flex flex-row flex-nowrap items-center border rounded-full px-1 py-0.5 md:px-0.5 md:py-0.5 border-[#313233] bg-gray-950 cursor-pointer hover:scale-105 transition-all duration-400 gap-2 md:gap-4">
+  <div className="bg-black w-full h-full rounded-full flex items-center justify-center px-4 py-2">
+  <CiMicrophoneOn className="bg-blue-500 rounded-full w-5 h-5 md:w-8 md:h-8 z-10" />
+    <span className="relative z-10 inline-block px-2 py-0.5 md:px-4 md:py-1 rounded-full text-white font-extralight text-sm md:text-lg shadow">
+      Audiex is here! Ask questions. Ask a pro
+    </span>
+  </div>
+  </button>
+</div>
+          <div className="flex flex-col items-center gap-4 z-10">
             {/* Heading */}
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-center text-white leading-tight mb-4">
               The All-In-One AI Platform
@@ -27,7 +45,7 @@ export default function LandingTR() {
               for Partners That Scale.
             </h1>
             {/* Description */}
-            <p className="max-w-2xl text-center text-gray-200 text-xl font-extralight">
+            <p className="max-w-2xl text-center text-gray-200 text-base px-2 md:text-xl font-extralight">
               Welcome to the platform built by AgencyX — where AI meets
               automation, voice meets action, and your brand enters the next
               era.
@@ -37,24 +55,7 @@ export default function LandingTR() {
 
         {/* Hero Content */}
         <div className="relative w-full flex-1 flex flex-col items-center justify-center">
-          {/* Background Image with Inset Shadow */}
-          <div className="absolute inset-0 z-0 overflow-hidden">
-            <div
-              className="absolute inset-0 w-full h-full"
-              style={{
-                backgroundImage: "url('/HeroPath.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                boxShadow: `
-            inset 200px 0 100px -70px rgba(0, 0, 0, 0.7),
-            inset -100px 0 100px 100px rgba(0, 0, 0, 1),
-            inset 0 100px 100px -150px rgba(0, 0, 0, 1),
-            inset 0 -100px 0px -70px rgba(0, 0, 0, 0.7)
-          `,
-              }}
-            ></div>
-          </div>
+
 
           {/* Content Container */}
           <div className="relative z-10 flex flex-col items-center gap-12 w-full h px-4">
@@ -75,7 +76,7 @@ export default function LandingTR() {
             </div>
 
             {/* Image Container */}
-            <div className="relative w-full max-w-4xl mx-auto [box-shadow:_0px_-80px_75px_-75px_rgba(255,255,255,1),30px_-20_30px_-5px_rgba(251,146,60,0.2)]">
+            <div className="relative w-full max-w-4xl mx-auto [box-shadow:_0px_-80px_75px_-75px_rgba(34,18,133,0.8),30px_-20_30px_-5px_rgba(157,18,164,0.5)] rounded-2xl">
               <Image
                 src={HeroImage}
                 alt="Dashboard Mockup"

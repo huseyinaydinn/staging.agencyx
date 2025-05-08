@@ -6,10 +6,10 @@ const page = () => {
 <section className="py-8 md:py-16 px-4 sm:px-6 lg:px-8 w-full flex items-center justify-center ">
   <div className='max-w-7xl grid grid-cols-1 lg:grid-cols-2 place-content-between w-full   gap-8 md:gap-12'>
         {/* Left Column - Description */}
-        <div className='md:col-span-2 lg:col-span-1 max-w-1/2 mx-auto'>
+        <div className='md:col-span-2 lg:col-span-1 md:max-w-1/2 w-full text-center mx-auto'>
           <div className='flex flex-col items-start text-center md:text-left p-4 md:p-0'>
-            <h2 className='text-xl lg:text-2xl text-white mb-4 font-bold w-full'>AgencyX Automates the Modern Enterprise.</h2>
-            <p className='text-gray-500 text-extralight text-sm sm:text-base'>
+            <h2 className='text-4xl lg:text-2xl text-center lg:text-left text-white mb-4 font-bold w-full'>AgencyX Automates the Modern Enterprise.</h2>
+            <p className='text-gray-500 text-center lg:text-left text-extralight text-sm sm:text-base'>
               We build AI-native platforms that replace busywork with intelligent systems — powering growth for companies ready to lead, not follow.
             </p>
           </div>

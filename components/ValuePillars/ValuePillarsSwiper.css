@@ -1,20 +1,14 @@
-.custom-swiper-pagination {
-  position: static !important;
-  margin-top: 1.5rem;
+.Pillarsgroup:hover h3,
+.Pillarsgroup:hover .text-sm,
+.Pillarsgroup:hover .text-xs {
+  color: #2772ec !important; 
+  transition: color 0.5s;
 }
 
-.custom-swiper-pagination .swiper-pagination-bullet {
-  width:10px;
-  height: 10px;
-  background: hwb(240 54% 45%);
-  opacity: 1;
-  border-radius: 50%;
-  margin: 0 6px !important;
-  transition: background 0.2s, border 0.2s;
+.Pillarsgroup:hover .text-xs {
+  color: #fcfcfc !important; 
 }
 
-.custom-swiper-pagination .swiper-pagination-bullet-active {
-  width:10px;
-  height: 10px;
-  background: #5197f2;
+.Pillarsgroup:hover .text-sm {
+  color: #ffffff !important; 
 }

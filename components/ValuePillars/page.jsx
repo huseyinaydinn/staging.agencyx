@@ -2,10 +2,11 @@
 
 import React, { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import '../ValuePillars/ValuePillarsSwiper.css';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const cardData = [
   {
@@ -32,7 +33,10 @@ const ArrowButton = ({ direction, onClick }) => (
   <button
     type="button"
     onClick={onClick}
-    className={`absolute top-1/2 z-20 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full w-8 h-8 flex items-center justify-center shadow transition-all duration-300 focus:outline-none ${direction === 'prev' ? 'left-2' : 'right-2'} block lg:hidden`}
+    className={direction === 'prev'
+  ? 'custom-prev flex absolute left-4 box-shadow-lg bg-transparent text-transparent top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center transition'
+  : 'custom-next flex absolute right-4 box-shadow-lg bg-transparent text-transparent top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center transition'
+}
     aria-label={direction === 'prev' ? 'Previous' : 'Next'}
     style={{ pointerEvents: 'auto' }}
   >
@@ -47,22 +51,25 @@ const ArrowButton = ({ direction, onClick }) => (
 const page = () => {
   const swiperRef = useRef(null);
   return (
-    <section className="flex flex-col items-center justify-center overflow-hidden py-24 md:py-32 pb-10 px-4 bg-black relative gap-12">
+    <section className="flex flex-col items-center justify-center overflow-hidden py-6 md:py-12 pb-10 px-4 relative gap-12" style={{background: 'linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 12%, rgba(31, 42, 77, 1) 16%, rgba(0, 0, 0, 1) 32%, rgba(16, 56, 22, 1) 50%, rgba(82, 82, 82, 0.2) 69%, rgba(0, 0, 0, 0.2) 86%, rgba(0, 0, 0, 1) 100%)'}} >
       <h2
         className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight mb-4 bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent"
       >
         Value Pillars
       </h2>
-      <div className="w-full max-w-lg lg:max-w-6xl relative">
+      <div className="w-full max-w-lg lg:max-w-6xl relative px-4 min-h-[420px]">
         {/* Prev Button */}
-        <ArrowButton direction="prev" onClick={() => swiperRef.current?.slidePrev()} />
-        {/* Next Button */}
-        <ArrowButton direction="next" onClick={() => swiperRef.current?.slideNext()} />
-        <Swiper
-          modules={[Pagination]}
+        <button className="custom-prev flex absolute left-2 box-shadow-lg bg-transparent text-transparent top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border items-center justify-center transition">
+  <FaChevronLeft className="text-[#5af5f0]" />
+</button>
+        <button className="custom-next flex absolute right-4 box-shadow-lg bg-transparent text-transparent top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center transition">
+  <FaChevronRight className="text-[#5af5f0]" />
+</button>
+        <Swiper 
+          navigation={{ prevEl: '.custom-prev', nextEl: '.custom-next' }} 
+          modules={[Pagination, Navigation]}
           spaceBetween={36}
           slidesPerView={1}
-          pagination={{ clickable: true, dynamicBullets: true }}
           onSwiper={swiper => (swiperRef.current = swiper)}
           breakpoints={{
             1024: {
@@ -71,12 +78,12 @@ const page = () => {
               allowTouchMove: false,
             },
           }}
-          className="group"
+          
         >
           {cardData.map((card) => (
-            <SwiperSlide key={card.title} className="flex">
+            <SwiperSlide key={card.title} className="flex Pillarsgroup p-1 justify-center">
               <div
-                className="flex-1 bg-black border border-[#273043] rounded-xl py-6 md:py-8 flex flex-col shadow-sm shadow-gray-800 min-w-[300px] max-w-md mx-auto relative overflow-hidden hover:scale-105 transition-all duration-500"
+                className="flex-1 bg-black border border-[#273043] rounded-xl py-6 md:py-8 flex flex-col shadow-sm shadow-gray-800 max-w-xs min-w-[300px] md:max-w-md mx-auto relative overflow-hidden hover:scale-105 hover:bg-[#0b0d11] transition-all duration-500 hover:py-5"
               >
                 {/* Glow Effect */}
                 <div className="absolute left-0 top-0 w-2/3 h-2/3 pointer-events-none z-0"
@@ -98,11 +105,8 @@ const page = () => {
               </div>
             </SwiperSlide>
           ))}
-          {/* Swiper Pagination will render here by default */}
+          
         </Swiper>
-        <div className="flex justify-center mt-6 lg:hidden">
-          <div className="swiper-pagination custom-swiper-pagination block lg:hidden"></div>
-        </div>
       </div>
     </section>
   )
