@@ -81,7 +81,7 @@ const page = () => {
           
         >
           {cardData.map((card) => (
-            <SwiperSlide key={card.title} className="flex Pillarsgroup p-1 justify-center">
+            <SwiperSlide key={card.title} className="flex Pillarsgroup  p-8 justify-center">
               <div
                 className="flex-1 bg-black border border-[#273043] rounded-xl py-6 md:py-8 flex flex-col shadow-sm shadow-gray-800 max-w-xs min-w-[300px] md:max-w-md mx-auto relative overflow-hidden hover:scale-105 hover:bg-[#0b0d11] transition-all duration-500 hover:py-5"
               >
