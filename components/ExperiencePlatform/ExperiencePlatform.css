@@ -39,3 +39,38 @@
     --angle: 360deg;
   }
 }
+
+.ExperiencePlatform .hero-bg {
+  background: radial-gradient(ellipse at bottom, #000000 0%, #0c0d13 100%);
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ExperiencePlatform .stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ExperiencePlatform .star {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: rgb(182, 29, 224);
+  border-radius: 50%;
+  opacity: 1;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.8; }
+  to { opacity: 0.2; }
+}

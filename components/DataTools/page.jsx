@@ -8,16 +8,9 @@ import "./DataTools.css";
 
 const DataTools = () => {
   return (
-    <section className="hero-bg flex flex-col items-center justify-center px-2 md:px-0 py-2 w-full h-full relative overflow-hidden">
+    <section className="flex flex-col items-center justify-center px-2 md:px-0 py-2 w-full h-full relative overflow-hidden">
       <div className=" absolute inset-0 w-full z-0 pointer-events-none">
-        <div className="stars">
-          <div className="star"></div>
-          <div className="star"></div>
-          <div className="star"></div>
-          <div className="star"></div>
-          <div className="star"></div>
-          <div className="star"></div>
-        </div>
+
       </div>
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-2 text-gray-100">
         Every Tool <span className="text-blue-300">You Wish You Had</span>
@@ -25,7 +18,7 @@ const DataTools = () => {
       <h3 className="text-xl md:text-2xl font-light text-center mb-8 text-gray-300">— Already Built</h3>
       <div className="w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4  grid-rows-1 lg:grid-rows-2 gap-4">
         {/* AI Agents Card */}
-        <div className="group bg-transparent border border-[#23252C] hover:border-blue-400/80 transition rounded-2xl shadow-lg p-5 flex flex-col lg:col-span-2 lg:row-span-2 min-h-[220px] lg:min-h-[280px] min-w-[180px] lg:min-w-[340px] relative overflow-hidden">
+        <div className="group bg-transparent border border-[#23252C] hover:border-blue-400/80 transition rounded-2xl p-5 flex flex-col lg:col-span-2 lg:row-span-2 min-h-[220px] lg:min-h-[280px] min-w-[180px] lg:min-w-[340px] relative overflow-hidden">
           <div className="pointer-events-none absolute inset-0 rounded-2xl z-10" style={{boxShadow:'inset 0 0 18px 5px rgba(156,163,175,0.1)'}}></div>
           <div className="flex items-center gap-2 mb-2 relative z-20">
             <span className="text-lg font-semibold text-gray-100 group-hover:text-blue-400">AI Agents</span>

@@ -3,7 +3,7 @@ import React from 'react'
 const page = () => {
   return (
 <>
-<section className="py-8 md:py-16 px-4 sm:px-6 lg:px-8 w-full flex items-center justify-center ">
+<section className="py-8 md:py-16 px-4 sm:px-6 lg:px-8 w-full flex items-center justify-center bg-black">
   <div className='max-w-7xl grid grid-cols-1 lg:grid-cols-2 place-content-between w-full   gap-8 md:gap-12'>
         {/* Left Column - Description */}
         <div className='md:col-span-2 lg:col-span-1 md:max-w-1/2 w-full text-center mx-auto'>
@@ -44,7 +44,7 @@ const page = () => {
     
     </section>
       <div className='w-full flex items-center justify-center py-2 text-center text-gray-500 text-xs'>
-      <h5 className='text-white text-sm text-extralight'>© 2025 AgencyX. All rights reserved.</h5>
+      <h5 className='text-white text-sm text-extralight bg-black'>© 2025 AgencyX. All rights reserved.</h5>
     </div></>
   )
 }

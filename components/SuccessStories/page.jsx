@@ -39,7 +39,19 @@ const stories = [
 export default function SuccessStories() {
   const swiperRef = useRef(null);
   return (
-    <section className="w-full flex flex-col items-center justify-center py-20 md:py-32 px-2 md:px-6 bg-black">
+    <section
+      className="hero-bg  w-full flex flex-col items-center justify-center py-20 md:py-32 px-2 md:px-6"
+    >
+                    <div className="stars">
+          <div className="star"></div>
+          <div className="star"></div>
+
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+
+          <div className="star"></div>
+        </div>
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight mb-12 bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent">
         Success <span className="font-normal">Stories</span>
       </h2>
@@ -67,8 +79,10 @@ export default function SuccessStories() {
           className="w-full"
         >
           {stories.map((story, idx) => (
-            <SwiperSlide key={idx} className="flex items-center justify-center">
-              <div className="flex flex-col w-full max-w-[450px] rounded-2xl bg-black border border-[#23252C] shadow-lg p-6 md:p-8 relative mx-auto" style={{boxShadow: '0 2px 12px 0 rgba(63,105,255,0.10), inset 0 8px 32px 0 rgba(255,255,255,0.08)'}}>
+            <SwiperSlide
+  key={idx}
+  className="flex items-center justify-center rounded-2xl"
+>              <div className=" flex flex-col w-full max-w-[450px] rounded-2xl bg-[rgba(0,0,0,0.01)] border border-[#23252C] shadow-lg p-6 md:p-8 relative mx-auto backdrop-blur-sm" style={{boxShadow: '0 2px 12px 0 rgba(63,105,255,0.10), inset 0 8px 32px 0 rgba(255,255,255,0.08)'}}>
                 <div className="text-[17px] md:text-lg text-white font-normal mb-4 tracking-tight">{story.title}</div>
                 <div className="w-full h-[170px] md:h-[160px] rounded-xl overflow-hidden mb-5">
                   <img src={story.image} alt={story.title} className="object-cover w-full h-full" />
@@ -95,10 +109,10 @@ export default function SuccessStories() {
                 </div>
                 <a
                   href={story.link}
-                  className="mt-auto w-1/2 flex items-center justify-center gap-2 rounded-xl px-0 py-0 h-[46px] bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 transition shadow-none text-white"
+                  className="mt-auto w-full sm:w-1/2 flex items-center justify-center gap-0 sm:gap-2 rounded-xl px-0 py-0 h-[46px] bg-blue-600 hover:bg-blue-500 transition shadow-none text-[#fff]"
                   style={{boxShadow:'0 2px 12px 0 rgba(63,105,255,0.10)'}}
                 >
-                  <span className="flex items-center justify-center gap-2 w-full h-full text-[15px] font-medium">
+                  <span className="flex items-center justify-center gap-2 w-full h-full text-xs sm:text-sm font-medium">
                     Read full case study <FaArrowRight className="ml-1 text-[16px]" />
                   </span>
                 </a>

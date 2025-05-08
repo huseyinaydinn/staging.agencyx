@@ -86,7 +86,7 @@ const SpecificSolutions = () => {
                 <div className="flex items-center justify-center h-36 w-full px-6 z-10 relative">
                   <img src="/SpecificSolutions/1.jpg" alt="Hospitality" className={`object-cover h-full w-full rounded-md transition-all duration-300 ${activeIndex === 0 ? '' : 'grayscale'}`} />
                 </div>
-                <a href="#" className="w-[150px] ml-6 px-4 py-2 text-xs font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 flex items-center gap-2 hover:gap-4 transition-all duration-300"><p>Find out more</p> <FaAngleRight /></a>
+                <a href="#" className="w-[150px] ml-6 px-4 py-2 text-xs font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-500 flex items-center gap-2 hover:gap-4 transition-all duration-300"><p>Find out more</p> <FaAngleRight /></a>
                 <p className={`px-6 text-[13px] italic ${activeIndex === 0 ? 'text-white' : 'text-gray-500'}`}>“Since switching, our front desk runs smoother, calls are answered instantly, and staff can focus on real guests — not chasing info.”</p>
                 <div className="flex items-center gap-2 px-6 mt-auto">
                   <img src="/avatar.png" alt="Omar Derghan" className="w-7 h-7 rounded-full border-2 border-gray-700" />
@@ -116,7 +116,7 @@ const SpecificSolutions = () => {
                 <div className="flex items-center justify-center h-36 w-full px-6 z-10 relative">
                   <img src="/SpecificSolutions/2.jpg" alt="Retail" className={`object-cover h-full w-full rounded-md transition-all duration-300 ${activeIndex === 1 ? '' : 'grayscale'}`} />
                 </div>
-                <a href="#" className="w-[150px] ml-6 px-4 py-2 text-xs font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 flex items-center gap-2 hover:gap-4 transition-all duration-300"><p>Find out more</p> <FaAngleRight /></a>
+                <a href="#" className="w-[150px] ml-6 px-4 py-2 text-xs font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-500 flex items-center gap-2 hover:gap-4 transition-all duration-300"><p>Find out more</p> <FaAngleRight /></a>
                 <p className={`px-6 text-[13px] italic ${activeIndex === 1 ? 'text-white' : 'text-gray-500'}`}>“Since switching, our front desk runs smoother, calls are answered instantly, and staff can focus on real guests — not chasing info.”</p>
                 <div className="flex items-center gap-2 px-6 mt-auto">
                   <img src="/avatar.png" alt="Omar Derghan" className="w-7 h-7 rounded-full border-2 border-gray-700" />
@@ -146,7 +146,7 @@ const SpecificSolutions = () => {
                 <div className="flex items-center justify-center h-36 w-full px-6 z-10 relative">
                   <img src="/SpecificSolutions/3.jpg" alt="Finance" className={`object-cover h-full w-full rounded-md transition-all duration-300 ${activeIndex === 2 ? '' : 'grayscale'}`} />
                 </div>
-                <a href="#" className="w-[150px] ml-6 px-4 py-2 text-xs font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 flex items-center gap-2 hover:gap-4 transition-all duration-300"><p>Find out more</p> <FaAngleRight /></a>
+                <a href="#" className="w-[150px] ml-6 px-4 py-2 text-xs font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-500 flex items-center gap-2 hover:gap-4 transition-all duration-300"><p>Find out more</p> <FaAngleRight /></a>
                 <p className={`px-6 text-[13px] italic ${activeIndex === 2 ? 'text-white' : 'text-gray-500'}`}>“We route and qualify leads instantly. The system is smarter than half the tools we replaced.”</p>
                 <div className="flex items-center gap-2 px-6 mt-auto">
                   <img src="/avatar.png" alt="Ayman Hasan" className="w-7 h-7 rounded-full border-2 border-gray-700" />
@@ -176,7 +176,7 @@ const SpecificSolutions = () => {
                 <div className="flex items-center justify-center h-36 w-full px-6 z-10 relative">
                   <img src="/SpecificSolutions/4.jpg" alt="Marketing Agencies" className={`object-cover h-full w-full rounded-md transition-all duration-300 ${activeIndex === 3 ? '' : 'grayscale'}`} />
                 </div>
-                <a href="#" className="w-[150px] ml-6 px-4 py-2 text-xs font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 flex items-center gap-2 hover:gap-4 transition-all duration-300"><p>Find out more</p> <FaAngleRight /></a>
+                <a href="#" className="w-[150px] ml-6 px-4 py-2 text-xs font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-500 flex items-center gap-2 hover:gap-4 transition-all duration-300"><p>Find out more</p> <FaAngleRight /></a>
                 <p className={`px-6 text-[13px] italic ${activeIndex === 3 ? 'text-white' : 'text-gray-500'}`}>“Our client delivery sped up 3x. AI builds the initial logic, and we just review. It’s like having an invisible ops team.”</p>
                 <div className="flex items-center gap-2 px-6 mt-auto">
                   <img src="/avatar.png" alt="Ayman Hasan" className="w-7 h-7 rounded-full border-2 border-gray-700" />

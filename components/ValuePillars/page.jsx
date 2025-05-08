@@ -26,7 +26,7 @@ const cardData = [
     subtitle: 'See What Others Can’t.',
     description: 'Get ahead of issues, ideas, and decisions with predictive dashboards and AI-drafted intelligence.',
     image: '/ValuePillar/ActionableInsights.png',
-  }
+  },
 ]
 
 const ArrowButton = ({ direction, onClick }) => (
@@ -51,7 +51,7 @@ const ArrowButton = ({ direction, onClick }) => (
 const page = () => {
   const swiperRef = useRef(null);
   return (
-    <section className="flex flex-col items-center justify-center overflow-hidden py-6 md:py-12 pb-10 px-4 relative gap-12" style={{background: 'linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 12%, rgba(31, 42, 77, 1) 16%, rgba(0, 0, 0, 1) 32%, rgba(16, 56, 22, 1) 50%, rgba(82, 82, 82, 0.2) 69%, rgba(0, 0, 0, 0.2) 86%, rgba(0, 0, 0, 1) 100%)'}} >
+    <section className="min-h-screen flex flex-col items-center justify-center overflow-hidden py-6 md:py-12 pb-10 px-4 relative gap-12 bg-[#0b0d11]" >
       <h2
         className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight mb-4 bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent"
       >
@@ -81,9 +81,9 @@ const page = () => {
           
         >
           {cardData.map((card) => (
-            <SwiperSlide key={card.title} className="flex Pillarsgroup  p-8 justify-center">
+            <SwiperSlide key={card.title} className="flex Pillarsgroup p-1 mt-12 mb-12 md:px-10 justify-center">
               <div
-                className="flex-1 bg-black border border-[#273043] rounded-xl py-6 md:py-8 flex flex-col shadow-sm shadow-gray-800 max-w-xs min-w-[300px] md:max-w-md mx-auto relative overflow-hidden hover:scale-105 hover:bg-[#0b0d11] transition-all duration-500 hover:py-5"
+                className="flex-1 bg-black border border-[#273043] rounded-xl py-6 md:py-8 flex flex-col shadow-sm shadow-gray-800 max-w-xs min-w-[300px] md:max-w-md mx-auto relative overflow-hidden hover:scale-110 hover:bg-[#0b0d11] transition-all duration-500"
               >
                 {/* Glow Effect */}
                 <div className="absolute left-0 top-0 w-2/3 h-2/3 pointer-events-none z-0"

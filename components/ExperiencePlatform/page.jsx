@@ -4,8 +4,16 @@ import "./ExperiencePlatform.css";
 
 const Page = () => {
   return (
-    <section className="flex flex-col items-center justify-center  w-full p-8 md:p-12 gap-4 md:gap-12">
-         
+    <section className="hero-bg ExperiencePlatform flex flex-col items-center justify-start  w-full p-2 md:p-4 gap-4 md:gap-12">
+                 <div className="stars">
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          
+        </div>
       {/* Başlık */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent">
         Experience Our Platform
@@ -29,9 +37,9 @@ const Page = () => {
 
 
       {/* Alt Buton */}
-    <div className="flex flex-col items-center gap-6">
+    <div className="max-w-[300px] flex flex-col items-center gap-6">
       <p className="font-light text-lg text-gray-400">Want more?</p>
-    <button className="px-6 py-2 bg-blue-500 text-white rounded-lg font-medium shadow hover:bg-blue-600 transition-all">
+    <button className="text-sm sm:text-base md:text-lg  px-6 py-2 bg-blue-600 text-[#fff] rounded-lg font-medium shadow hover:bg-blue-500 transition-all">
         Let's build your stack together
       </button>
     </div>
