@@ -47,7 +47,13 @@ export default function MatrixRainEffect() {
       drops = Array.from({ length: columns }).fill(1);
     }
 
+    window.addEventListener('resize', handleResize);
 
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', resizeCanvas);
+    };
   }, []);
 
   // Gradyan overlay fonksiyonu
