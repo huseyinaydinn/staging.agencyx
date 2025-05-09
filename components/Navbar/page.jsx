@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { CiMenuFries } from 'react-icons/ci';
 import { IoMdClose } from 'react-icons/io';
+import GasLogo from '../../public/GasLogo.png'
+
 const page = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
@@ -12,8 +14,8 @@ const page = () => {
       <nav className="fixed top-0 left-0 w-full md:bg-[rgba(0,0,0,0.6)] bg-[rgba(0,0,0,0.8)] backdrop-blur-[5px] z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/tr" className="flex items-center gap-2">
-            <Image src="../GasLogo.svg" alt="GAS Logo" width={107} height={36} priority />
+          <a href="/en" className="flex items-center gap-2">
+            <Image src={GasLogo} alt="GAS Logo" width={107} height={36} priority />
           </a>
           <div className="flex flex-row items-center gap-16">
             {/* Menu */}

@@ -30,9 +30,9 @@ export default function LandingTR() {
         </div>
         {/* Badge */}
         <div className=" flex flex-col items-center gap-9">
-        <div className="heroButtonEffect" style={{display:'inline-flex'}}>
+        <div className="heroButtonEffect rounded-full" style={{display:'inline-flex'}}>
   <button className="heroButtonEffect relative overflow-hidden flex flex-row flex-nowrap items-center border rounded-full px-1 py-0.5 md:px-0.5 md:py-0.5 border-[#313233] bg-gray-950 cursor-pointer hover:scale-105 transition-all duration-400 gap-2 md:gap-4">
-  <div className="bg-black w-full h-full rounded-full flex items-center justify-center px-4 py-2">
+  <div className="bg-black  w-full h-full rounded-full flex items-center justify-center px-4 py-2">
   <CiMicrophoneOn className="bg-blue-500 rounded-full w-5 h-5 md:w-8 md:h-8 z-10" />
     <span className="relative z-10 inline-block px-2 py-0.5 md:px-4 md:py-1 rounded-full text-white font-extralight text-sm md:text-lg shadow">
       Audiex is here! Ask questions. Ask a pro
