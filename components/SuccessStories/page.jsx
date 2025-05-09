@@ -41,7 +41,7 @@ export default function SuccessStories() {
   return (
     <div className='bg-black'>
         <section
-      className="hero-bg  w-full flex flex-col items-center justify-center py-20 md:py-32 px-2 md:px-6"
+      className="hero-bg  w-full flex flex-col items-center justify-center py-2 md:py-4 px-2 md:px-6"
     >
                     <div className="stars">
           <div className="star"></div>

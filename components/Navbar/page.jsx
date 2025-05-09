@@ -27,7 +27,12 @@ const page = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="relative text-white hover:text-blue-500 transition group"
+                  className="relative text-white hover:text-blue-500 transition group cursor-pointer"
+                  onClick={e => {
+                    e.preventDefault();
+                    const el = document.querySelector(item.href);
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }}
                 >
                   {item.label}
                   <span
@@ -56,10 +61,10 @@ const page = () => {
         {menuOpen && (
           
             <div className="md:hidden bg-[rgba(0,0,0,0.01)] border-gray-700 px-4 py-4 space-y-2 shadow-lg h-screen flex flex-col items-end justify-start pt-12 animate-navbar-slide-down max-w-[75vw] ml-auto">
-            <a href="#home" className={`${menuOpen ? '' : ''} block py-2 text-gray-200 hover:text-blue-500 transition border-r-4 border-purple-900 focus:border-blue-300 focus:rounded-sm px-4 w-[100%]  focus:bg-purple-950  text-center duration-300 `}>Home</a>
-            <a href="#about" className="block py-2 text-gray-200 hover:text-blue-500 transition border-r-4 border-purple-900 focus:border-blue-300 focus:rounded-sm px-4 w-[100%]  focus:bg-purple-950  text-center duration-300">About Us</a>
-            <a href="#how" className="block py-2 text-gray-200 hover:text-blue-500 transition border-r-4 border-purple-900 focus:border-blue-300 focus:rounded-sm px-4 w-[100%]  focus:bg-purple-950  text-center duration-300">How it Works</a>
-            <a href="#faqs" className="block py-2 text-gray-200 hover:text-blue-500 transition border-r-4 border-purple-900 focus:border-blue-300 focus:rounded-sm px-4 w-[100%]  focus:bg-purple-950  text-center duration-300">FAQs</a>
+            <a href="#home" className={`${menuOpen ? '' : ''} block py-2 text-gray-200 hover:text-blue-500 transition border-r-4 border-purple-900 focus:border-blue-300 focus:rounded-sm px-4 w-[100%]  focus:bg-purple-950  text-center duration-300 cursor-pointer`} onClick={e => {e.preventDefault(); const el = document.querySelector('#home'); if (el) el.scrollIntoView({behavior: 'smooth'}); setMenuOpen(false);}}>Home</a>
+            <a href="#about" className="block py-2 text-gray-200 hover:text-blue-500 transition border-r-4 border-purple-900 focus:border-blue-300 focus:rounded-sm px-4 w-[100%]  focus:bg-purple-950  text-center duration-300 cursor-pointer" onClick={e => {e.preventDefault(); const el = document.querySelector('#about'); if (el) el.scrollIntoView({behavior: 'smooth'}); setMenuOpen(false);}}>About Us</a>
+            <a href="#how" className="block py-2 text-gray-200 hover:text-blue-500 transition border-r-4 border-purple-900 focus:border-blue-300 focus:rounded-sm px-4 w-[100%]  focus:bg-purple-950  text-center duration-300 cursor-pointer" onClick={e => {e.preventDefault(); const el = document.querySelector('#how'); if (el) el.scrollIntoView({behavior: 'smooth'}); setMenuOpen(false);}}>How it Works</a>
+            <a href="#faqs" className="block py-2 text-gray-200 hover:text-blue-500 transition border-r-4 border-purple-900 focus:border-blue-300 focus:rounded-sm px-4 w-[100%]  focus:bg-purple-950  text-center duration-300 cursor-pointer" onClick={e => {e.preventDefault(); const el = document.querySelector('#faqs'); if (el) el.scrollIntoView({behavior: 'smooth'}); setMenuOpen(false);}}>FAQs</a>
             <a href="#contact" className="block w-full mt-8 px-1 py-2 bg-blue-600 text-white rounded-lg font-semibold shadow hover:bg-blue-500 transition duration-300 text-center">Contact Us</a>
           </div>
         )}

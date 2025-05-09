@@ -17,6 +17,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+import ScrollToTopButton from '../components/ScrollToTopButton';
+
 export default function RootLayout({ children }) {
   const [loading, setLoading] = useState(true);
 
@@ -49,6 +51,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+      <ScrollToTopButton />
       </body>
     </html>
   );

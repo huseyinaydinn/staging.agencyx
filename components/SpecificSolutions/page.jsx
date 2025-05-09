@@ -21,7 +21,7 @@ const SpecificSolutions = () => {
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <section className="w-full flex flex-col items-center justify-center overflow-hidden py-20 md:py-32 px-4 bg-black relative gap-10">
+    <section className="w-full flex flex-col items-center justify-center overflow-hidden py-2 md:py-6 px-4 bg-black relative gap-10">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight mb-2 bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent">
         Industry-<span className="font-semibold">Specific <span className="text-blue-300">Solutions</span></span>
       </h2>

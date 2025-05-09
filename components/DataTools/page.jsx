@@ -8,7 +8,7 @@ import "./DataTools.css";
 
 const DataTools = () => {
   return (
-    <section className="flex flex-col items-center justify-center px-2 md:px-0 py-2 w-full h-full relative overflow-hidden bg-black">
+    <section id="how" className="flex flex-col items-center justify-center px-2 md:px-0 py-2 w-full h-full relative overflow-hidden bg-black">
       <div className=" absolute inset-0 w-full z-0 pointer-events-none">
 
       </div>
