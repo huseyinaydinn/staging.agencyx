@@ -1,0 +1,30 @@
+/* DemoStartButtons starry background */
+.demo-start-buttons-bg {
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+.demo-start-buttons-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-radial-gradient(circle, rgba(95, 23, 71, 0.9) 0 1px, transparent 1px 54px);
+  background-size: 80px 80px;
+  opacity: 0.6;
+}
+
+.demo-start-buttons-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-radial-gradient(circle, rgba(20, 80, 84, 0.9) 0 1px, transparent 1px 50px);
+  background-size: 80px 80px;
+  opacity: 0.6;
+
+}

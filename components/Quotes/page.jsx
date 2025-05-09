@@ -41,7 +41,7 @@ export default function QuotesCarousel() {
           spaceBetween={0}
           slidesPerView={1}
           loop={true}
-          speed={3000}
+          speed={1000}
           autoplay={{ delay: 4000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           className="quotes-swiper"

@@ -16,7 +16,7 @@ const stories = [
     before: { label: '12 hrs/week wasted', color: 'text-[#FF7D7D]' },
     after: { label: '80% time saved', color: 'text-[#6BE2A6]' },
     desc: 'Streamlined guest check-in and follow-up processes, reducing administrative workload and improving guest satisfaction scores by 32%.',
-    tools: ['Workflow Builder', 'CRM Dashboard', 'AI Agents'],
+    tools: ['Workflow Builder', 'CRM Dashboard', 'AI Agents','Workflow'],
     button: 'Read full case study',
     buttonColor: 'bg-[#3F69FF]',
     buttonText: 'text-white',
@@ -67,12 +67,13 @@ export default function SuccessStories() {
         {/* Swiper */}
         <Swiper
           modules={[Navigation, Pagination]}
-          spaceBetween={8}
+          spaceBetween={100}
+          breakpoints
           slidesPerView={1}
           loop={true}
           navigation={{ prevEl: '.custom-prev', nextEl: '.custom-next' }}
           breakpoints={{
-            1024: { slidesPerView: 2 },
+            768: { slidesPerView: 2 },
           }}
           pagination={{ clickable: true, dynamicBullets: true, el: '.custom-success-pagination' }}
           onSwiper={swiper => (swiperRef.current = swiper)}
@@ -82,7 +83,7 @@ export default function SuccessStories() {
             <SwiperSlide
   key={idx}
   className="flex items-center justify-center rounded-2xl"
->              <div className=" flex flex-col w-full max-w-[450px] rounded-2xl bg-[rgba(0,0,0,0.01)] border border-[#23252C] shadow-lg p-6 md:p-8 relative mx-auto backdrop-blur-sm" style={{boxShadow: '0 2px 12px 0 rgba(63,105,255,0.10), inset 0 8px 32px 0 rgba(255,255,255,0.08)'}}>
+>              <div className=" flex flex-col w-full  md:max-w-[560px] rounded-2xl bg-[rgba(0,0,0,0.01)] border border-[#23252C] shadow-lg p-6 md:p-8 relative mx-auto backdrop-blur-sm" style={{boxShadow: '0 2px 12px 0 rgba(63,105,255,0.10), inset 0 8px 32px 0 rgba(255,255,255,0.08)'}}>
                 <div className="text-[17px] md:text-lg text-white font-normal mb-4 tracking-tight">{story.title}</div>
                 <div className="w-full h-[170px] md:h-[160px] rounded-xl overflow-hidden mb-5">
                   <img src={story.image} alt={story.title} className="object-cover w-full h-full" />
@@ -112,7 +113,7 @@ export default function SuccessStories() {
                   className="mt-auto w-full sm:w-1/2 flex items-center justify-center gap-0 sm:gap-2 rounded-xl px-0 py-0 h-[46px] bg-blue-600 hover:bg-blue-500 transition shadow-none text-[#fff]"
                   style={{boxShadow:'0 2px 12px 0 rgba(63,105,255,0.10)'}}
                 >
-                  <span className="flex items-center justify-center gap-2 w-full h-full text-xs sm:text-sm font-medium">
+                  <span className="flex items-center justify-center text-center gap-2 w-full h-full text-xs sm:text-sm font-medium">
                     Read full case study <FaArrowRight className="ml-1 text-[16px]" />
                   </span>
                 </a>

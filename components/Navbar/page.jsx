@@ -2,13 +2,14 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-
+import { CiMenuFries } from 'react-icons/ci';
+import { IoMdClose } from 'react-icons/io';
 const page = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 w-full md:bg-[rgba(0,0,0,0.6)] bg-[rgba(0,0,0,0.8)] backdrop-blur z-50">
+      <nav className="fixed top-0 left-0 w-full md:bg-[rgba(0,0,0,0.6)] bg-[rgba(0,0,0,0.8)] backdrop-blur-[5px] z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/tr" className="flex items-center gap-2">
@@ -43,22 +44,23 @@ const page = () => {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              className="p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="p-2 rounded focus:outline-none focus:ring-0  focus:text-purple-500 transition duration-300"
               aria-label="Open menu"
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              <svg className="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+              {menuOpen ? <IoMdClose size={24} /> : <CiMenuFries size={24} />}
             </button>
           </div>
         </div>
         {/* Mobile Dropdown Menu */}
         {menuOpen && (
-          <div className="md:hidden bg-[rgba(0,0,0,0)] border-t border-gray-700 px-4 py-4 space-y-2 shadow-lg h-screen flex flex-col items-center pt-12 animate-navbar-slide-down">
-            <a href="#home" className="block py-2 text-gray-200 hover:text-blue-500 transition">Home</a>
-            <a href="#about" className="block py-2 text-gray-200 hover:text-blue-500 transition">About Us</a>
-            <a href="#how" className="block py-2 text-gray-200 hover:text-blue-500 transition">How it Works</a>
-            <a href="#faqs" className="block py-2 text-gray-200 hover:text-blue-500 transition">FAQs</a>
-            <a href="#contact" className="block w-1/2 mt-2 px-5 py-2 bg-blue-600 text-white rounded-lg font-semibold shadow hover:bg-blue-500 transition duration-300 text-center">Contact Us</a>
+          
+            <div className="md:hidden bg-[rgba(0,0,0,0.01)] border-gray-700 px-4 py-4 space-y-2 shadow-lg h-screen flex flex-col items-end justify-start pt-12 animate-navbar-slide-down max-w-[75vw] ml-auto">
+            <a href="#home" className={`${menuOpen ? '' : ''} block py-2 text-gray-200 hover:text-blue-500 transition border-r-4 border-purple-900 focus:border-blue-300 focus:rounded-sm px-4 w-[100%]  focus:bg-purple-950  text-center duration-300 `}>Home</a>
+            <a href="#about" className="block py-2 text-gray-200 hover:text-blue-500 transition border-r-4 border-purple-900 focus:border-blue-300 focus:rounded-sm px-4 w-[100%]  focus:bg-purple-950  text-center duration-300">About Us</a>
+            <a href="#how" className="block py-2 text-gray-200 hover:text-blue-500 transition border-r-4 border-purple-900 focus:border-blue-300 focus:rounded-sm px-4 w-[100%]  focus:bg-purple-950  text-center duration-300">How it Works</a>
+            <a href="#faqs" className="block py-2 text-gray-200 hover:text-blue-500 transition border-r-4 border-purple-900 focus:border-blue-300 focus:rounded-sm px-4 w-[100%]  focus:bg-purple-950  text-center duration-300">FAQs</a>
+            <a href="#contact" className="block w-full mt-8 px-1 py-2 bg-blue-600 text-white rounded-lg font-semibold shadow hover:bg-blue-500 transition duration-300 text-center">Contact Us</a>
           </div>
         )}
       </nav>
