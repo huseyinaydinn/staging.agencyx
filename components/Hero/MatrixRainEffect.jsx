@@ -100,6 +100,6 @@ export default function MatrixRainEffect() {
   }, []);
 
   return (
-    <canvas ref={canvasRef} className="absolute inset-0 w-full h-full block z-0 pointer-events-none shadow mx-auto " />
+    <canvas ref={canvasRef} className="absolute inset-0 w-full h-full block pointer-events-none shadow mx-auto z-10" />
   );
 }
