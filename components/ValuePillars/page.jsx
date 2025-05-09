@@ -51,22 +51,28 @@ const ArrowButton = ({ direction, onClick }) => (
 const page = () => {
   const swiperRef = useRef(null);
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center overflow-hidden py-6 md:py-12 pb-10 px-4 relative gap-12 bg-[#0b0d11]" >
+    <section className="min-h-screen flex flex-col items-center justify-center overflow-hidden py-6 md:py-12 pb-10 px-4 relative gap-12 bg-black" >
       <h2
         className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight mb-4 bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent"
       >
         Value Pillars
       </h2>
-      <div className="w-full max-w-lg lg:max-w-6xl relative px-4 min-h-[420px]">
+      <div className="w-full max-w-lg lg:max-w-7xl relative  min-h-[516px]">
 
         <Swiper
           navigation={true}
           modules={[Pagination, Navigation]}
-          spaceBetween={36}
+          spaceBetween={0}
           slidesPerView={1}
           onSwiper={swiper => (swiperRef.current = swiper)}
           breakpoints={{
+            768: {
+              slidesPerView: 1,
+            },
             1024: {
+              slidesPerView: 2,
+            },
+            1280: {
               slidesPerView: 3,
               pagination: false,
               allowTouchMove: false,
@@ -74,9 +80,10 @@ const page = () => {
           }}
         >
           {cardData.map((card) => (
-            <SwiperSlide key={card.title} className="flex Pillarsgroup p-1 mt-12 mb-12 md:px-10 justify-center">
+            <SwiperSlide key={card.title} className="flex Pillarsgroup justify-center">
               <div
-                className="flex-1 bg-black border border-[#273043] rounded-xl py-6 md:py-8 flex flex-col shadow-sm shadow-gray-800 max-w-xs min-w-[300px] md:max-w-md mx-auto relative overflow-hidden hover:scale-110 hover:bg-[#0b0d11] transition-all duration-500"
+                className="flex-1 bg-black border border-[#273043] rounded-xl py-6 md:py-8 flex flex-col shadow-sm shadow-gray-800 max-w-xs min-w-[300px] md:max-w-md mx-auto relative overflow-hidden transition-all duration-500 h-[516px] w-[300px] sm:w-[400px]"
+                
               >
                 {/* Glow Effect */}
                 <div className="absolute left-0 top-0 w-2/3 h-2/3 pointer-events-none z-0"
@@ -85,7 +92,7 @@ const page = () => {
                     filter: 'blur(6px)',
                   }}
                 />
-                <div className="mb-6 flex items-center justify-center h-40 w-full px-6 z-10 relative">
+                <div className="mb-6 flex items-center justify-center h-[275px] w-full px-6 z-10 relative">
                   <img src={card.image} alt={card.title} className="object-fill h-full w-full" />
                 </div>
                 <div className="mt-auto flex flex-col w-full items-start gap-8 pl-6 z-10 relative">

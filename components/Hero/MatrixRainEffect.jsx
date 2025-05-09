@@ -39,7 +39,7 @@ export default function MatrixRainEffect() {
       }
     }
 
-    let interval = setInterval(draw, 40);
+    let interval = setInterval(draw, 80);
 
     function handleResize() {
       resizeCanvas();
@@ -47,13 +47,34 @@ export default function MatrixRainEffect() {
       drops = Array.from({ length: columns }).fill(1);
     }
 
-    window.addEventListener('resize', handleResize);
 
-    return () => {
-      clearInterval(interval);
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('resize', resizeCanvas);
-    };
+  }, []);
+
+  // Gradyan overlay fonksiyonu
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    // Her frame'de matrix efektinden sonra gradyan uygula
+    function applyGradientMask() {
+      if (!canvas) return;
+      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      gradient.addColorStop(0, 'rgba(0,0,0,0.1)'); 
+      gradient.addColorStop(0.2, 'rgba(0,0,0,0.8)');
+      gradient.addColorStop(0.4, 'rgba(0,0,0,0.9'); // ortalara doğru yarı görünür
+      gradient.addColorStop(1, 'rgba(0,0,0,1)'); // altta tam görünür
+      ctx.globalCompositeOperation = 'destination-in';
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.globalCompositeOperation = 'source-over';
+    }
+
+    // Canvas'a sürekli efekt çiziliyorsa, animasyon loop'una inject etmeliyiz
+    // 50ms'de bir gradyan uygula (veya mevcut animasyon loop'unun sonuna eklenebilir)
+    const interval = setInterval(applyGradientMask, 5);
+    return () => clearInterval(interval);
   }, []);
 
   return (

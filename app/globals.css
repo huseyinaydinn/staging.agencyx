@@ -82,7 +82,7 @@ button {
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background: #23252C;
+  background: #000000;
   color: #fff;
   border-color: #5af5f0;  
 }
