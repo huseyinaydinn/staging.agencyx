@@ -88,8 +88,8 @@ const page = () => {
                 {/* Glow Effect */}
                 <div className="absolute left-0 top-0 w-2/3 h-2/3 pointer-events-none z-0"
                   style={{
-                    background: 'radial-gradient(circle at -10% -10%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.06) 50%, transparent 100%)',
-                    filter: 'blur(6px)',
+                    background: 'radial-gradient(circle at -10% -10%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 50%, transparent 100%)',
+                    filter: 'blur(4px)',
                   }}
                 />
                 <div className="mb-6 flex items-center justify-center h-[275px] w-full px-6 z-10 relative">

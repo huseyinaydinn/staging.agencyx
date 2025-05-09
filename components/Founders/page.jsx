@@ -81,7 +81,7 @@ export default function Founders() {
             {founders.map((founder, idx) => {
               // Farklı renkler için sınıflar
               const borderClasses = [
-                "hover:border-green-500 hover:shadow-[rgba(74,222,128,0.8)]",
+                "hover:border-green-500 hover:shadow-[rgba(74,222,128,0.8)] ",
                 "hover:border-blue-500 hover:shadow-[rgba(97,197,243,0.8)]",
                 "hover:border-yellow-500 hover:shadow-[rgba(255,215,0,0.8)]",
                 "hover:border-purple-500 hover:shadow-[rgba(128,0,128,0.8)]"
@@ -93,8 +93,8 @@ export default function Founders() {
                   <div className="group flex flex-col items-center">
                     {/* Kart */}
                     <div
-                      className={`flex flex-col justify-between mt-12 w-64 h-72 md:w-[200px] md:h-80 rounded-2xl border border-[#23252C] shadow-sm relative mx-auto bg-cover bg-center overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-2xl ${borderClasses[colorIndex]} group-hover:scale-105`}
-                      style={{ backgroundImage: `url(${founder.image})` }}
+                      className={`flex flex-col justify-between mt-12 w-64 h-72 md:w-[200px] md:h-80 rounded-2xl border border-[#23252C] shadow-sm relative mx-auto bg-cover bg-center overflow-hidden cursor-pointer transition-all duration-300 active:shadow-2xl  hover:shadow-2xl ${borderClasses[colorIndex]} group-hover:scale-105`}
+                      style={{ backgroundImage: `url(${founder.image})`  }}
                     >
                       {/* Gradient overlay for better text visibility */}
                       <div className="absolute bottom-0 left-0 right-0 h-[150px] bg-gradient-to-t from-black/90 to-transparent z-0"></div>
