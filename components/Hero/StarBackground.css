@@ -76,6 +76,12 @@
   50% { opacity: 0.6; }
 }
 
+@media screen and (max-width: 750px) {
+  .hero-bg {
+    min-height: 100vh;
+    font-size: 2rem;
+  }
+}
 
 .hero-bg .star:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s, 0s; }
 .hero-bg .star:nth-child(2) { top: 30%; left: 80%; animation-delay: 0.5s, 0.5s; }
