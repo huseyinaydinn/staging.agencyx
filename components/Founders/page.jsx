@@ -46,7 +46,7 @@ const founders = [
 
 export default function Founders() {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-black">
       <div className="max-w-6xl mx-auto px-4 flex flex-col gap-8">
         <h2 className="text-center text-lg md:text-xl font-extralight text-gray-500 mb-4">
           The Founders Behind the Platform the Market Was Missing.

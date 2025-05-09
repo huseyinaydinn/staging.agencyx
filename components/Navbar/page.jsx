@@ -48,7 +48,7 @@ const page = () => {
               aria-label="Open menu"
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              {menuOpen ? <IoMdClose size={24} /> : <CiMenuFries size={24} />}
+              {menuOpen ? <IoMdClose size={24} className='text-white' /> : <CiMenuFries size={24} className='text-white' />}
             </button>
           </div>
         </div>

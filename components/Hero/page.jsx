@@ -13,7 +13,7 @@ export default function LandingTR() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <>
+    <div className="bg-black">
       {/* Hero Section */}
       <section className="hero-bg el flex flex-col items-center justify-center min-h-screen overflow-hidden pt-24 md:pt-32 pb-10 px-4 bg-black relative gap-12">
         <div className="stars">
@@ -91,6 +91,6 @@ export default function LandingTR() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

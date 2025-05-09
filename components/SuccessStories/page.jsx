@@ -39,7 +39,8 @@ const stories = [
 export default function SuccessStories() {
   const swiperRef = useRef(null);
   return (
-    <section
+    <div className='bg-black'>
+        <section
       className="hero-bg  w-full flex flex-col items-center justify-center py-20 md:py-32 px-2 md:px-6"
     >
                     <div className="stars">
@@ -133,5 +134,6 @@ export default function SuccessStories() {
         <div className="custom-success-pagination absolute left-0 right-0 bottom-0 flex items-center justify-center pb-2 z-20" />
       </div>
     </section>
+    </div>
   );
 }

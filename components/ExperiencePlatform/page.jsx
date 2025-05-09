@@ -4,7 +4,8 @@ import "./ExperiencePlatform.css";
 
 const Page = () => {
   return (
-    <section className="hero-bg ExperiencePlatform flex flex-col items-center justify-start  w-full p-2 md:p-4 gap-4 md:gap-12">
+    <div className="bg-black">
+          <section className="hero-bg ExperiencePlatform flex flex-col items-center justify-start  w-full p-2 md:p-4 gap-4 md:gap-12">
                  <div className="stars">
           <div className="star"></div>
           <div className="star"></div>
@@ -44,6 +45,7 @@ const Page = () => {
       </button>
     </div>
     </section>
+    </div>
   );
 };
 

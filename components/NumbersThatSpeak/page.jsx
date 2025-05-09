@@ -29,7 +29,8 @@ const stats = [
 
 const page = () => {
   return (
-    <section className="hero-bg flex flex-col items-center justify-center min-h-screen overflow-hidden pt-2 md:pt-12 pb-10 px-4 bg-black relative gap-5">
+    <div className='bg-black'>
+          <section className="hero-bg flex flex-col items-center justify-center min-h-screen overflow-hidden pt-2 md:pt-12 pb-10 px-4 bg-black relative gap-5">
               <div className="stars">
           <div className="star"></div>
           <div className="star"></div>
@@ -68,6 +69,7 @@ const page = () => {
         ))}
       </div>
     </section>
+    </div>
   )
 }
 
