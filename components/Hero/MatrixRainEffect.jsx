@@ -70,17 +70,8 @@ export default function MatrixRainEffect() {
 
     ensureSizeAndStart();
 
-    function handleResize() {
-      setCanvasSize();
-      columns = Math.floor(canvas.width / fontSize);
-      drops = Array.from({ length: columns }).fill(1);
-    }
-    window.addEventListener('resize', handleResize);
 
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-      window.removeEventListener('resize', handleResize);
-    };
+
     function applyGradientMask() {
       if (!canvas) return;
       const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
