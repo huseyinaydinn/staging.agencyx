@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import '../SpecificSolutions/SpecificSolutions.css';
@@ -29,27 +29,9 @@ const SpecificSolutions = () => {
         This platform powers high-output teams across industries. See how real teams unlock next-level efficiency.
       </div>
       <div className="w-full relative overflow-hidden" style={{height:'500px'}}>
-        {/* Prev Button */}
-        <button
-          type="button"
-          onClick={() => swiperRef.current?.slidePrev()}
-          className="absolute top-1/2 z-20 -translate-y-1/2 bg-transparent border-[#5af5f0] border  text-white rounded-full w-10 h-10 flex items-center justify-center shadow transition-all duration-300 focus:outline-none left-2 lg:hidden"
-          aria-label="Previous"
-          style={{ pointerEvents: 'auto' }}
-        >
-          <FaChevronLeft className="text-[#5af5f0]" />
-          </button>
-        {/* Next Button */}
-        <button
-          type="button"
-          onClick={() => swiperRef.current?.slideNext()}
-          className="absolute top-1/2 z-20 -translate-y-1/2 bg-transparent border-[#5af5f0] border  text-white rounded-full w-10 h-10 flex items-center justify-center shadow transition-all duration-300 focus:outline-none right-2 lg:hidden"
-          aria-label="Next"
-          style={{ pointerEvents: 'auto' }}
-        >
-          <FaChevronRight className="text-[#5af5f0]" />
-          </button>
+
         <Swiper
+          navigation={true}
           breakpoints={
             {
               0: {
@@ -69,7 +51,7 @@ const SpecificSolutions = () => {
           spaceBetween={20}
           initialSlide={3}
           pagination={{ clickable: true }}
-          modules={[Pagination]}
+          modules={[Pagination, Navigation]}
           className="mySwiper"
         >
           {/* Hospitality Card */}

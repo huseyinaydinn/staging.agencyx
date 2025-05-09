@@ -56,12 +56,12 @@ export default function SuccessStories() {
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight mb-12 bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent">
         Success <span className="font-normal">Stories</span>
       </h2>
-      <div className="w-full max-w-7xl relative flex items-center justify-center pb-12 px-1">
+      <div className="w-full max-w-7xl  relative flex items-center justify-center pb-12 px-1">
         {/* Prev Button */}
         <button
           type="button"
           aria-label="Previous"
-          className="custom-prev flex absolute left-4 box-shadow-lg bg-transparent text-transparent top-1/3 -translate-y-1/2  z-10 w-10 h-10 rounded-full border items-center justify-center  transition" 
+          className="custom-prev flex border-[#5af5f0] absolute left-4 box-shadow-lg bg-transparent text-transparent top-1/3 -translate-y-1/2  z-10 w-10 h-10 rounded-full border items-center justify-center  transition" 
         >
           <FaChevronLeft className="text-xl text-[#5af5f0]" />
         </button>
@@ -126,7 +126,7 @@ export default function SuccessStories() {
         <button
           type="button"
           aria-label="Next"
-          className="custom-next flex absolute right-4 top-1/3 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center hover:bg-[#23252C] transition text-transparent bg-transparent" 
+          className="custom-next flex border-[#5af5f0] absolute right-4 top-1/3 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center hover:bg-[#23252C] transition text-transparent bg-transparent" 
         >
           <FaChevronRight className="text-xl text-[#5af5f0]" />
         </button>

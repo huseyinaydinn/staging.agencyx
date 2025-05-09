@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from 'swiper/modules';
 import { FaLinkedin, FaInstagram, FaGithub, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "swiper/css";
 
@@ -56,25 +57,26 @@ export default function Founders() {
           Now it’s yours to use — and scale with.
         </h3>
         <div className="relative flex items-center">
-        <button className="custom-prev flex absolute left-2 box-shadow-lg bg-transparent border-[#5af5f0] text-transparent top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border items-center justify-center transition">
+        <button className="custom-prev flex absolute left-2 box-shadow-lg bg-transparent border-[#5af5f0] text-transparent top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border items-center justify-center transition lg:hidden">
   <FaChevronLeft className="text-[#5af5f0]" />
 </button>
-       <button className="custom-next flex absolute right-4 box-shadow-lg bg-transparent border-[#5af5f0] text-transparent top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center transition">
+       <button className="custom-next flex absolute right-4 box-shadow-lg bg-transparent border-[#5af5f0] text-transparent top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center transition lg:hidden">
   <FaChevronRight className="text-[#5af5f0]" />
 </button>
           <Swiper
             spaceBetween={8}
             slidesPerView={1}
+            loop={true}
             breakpoints={{
               640: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-              1280: { slidesPerView: 4 },
+              1024: { slidesPerView: 4 },
             }}
             navigation={{
               prevEl: '.custom-prev',
               nextEl: '.custom-next'
             }}
+            modules={[Navigation]}
           >
             {founders.map((founder, idx) => {
               // Farklı renkler için sınıflar

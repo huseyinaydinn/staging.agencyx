@@ -34,7 +34,7 @@ const ArrowButton = ({ direction, onClick }) => (
     type="button"
     onClick={onClick}
     className={direction === 'prev'
-  ? 'custom-prev flex absolute left-4 box-shadow-lg bg-transparent text-transparent top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center transition'
+  ? ' custom-prev flex absolute left-4 box-shadow-lg bg-transparent text-transparent top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center transition'
   : 'custom-next flex absolute right-4 box-shadow-lg bg-transparent text-transparent top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center transition'
 }
     aria-label={direction === 'prev' ? 'Previous' : 'Next'}
@@ -58,15 +58,9 @@ const page = () => {
         Value Pillars
       </h2>
       <div className="w-full max-w-lg lg:max-w-6xl relative px-4 min-h-[420px]">
-        {/* Prev Button */}
-        <button className="custom-prev flex absolute left-2 box-shadow-lg bg-transparent border-[#5af5f0] text-transparent top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border items-center justify-center transition">
-  <FaChevronLeft className="text-[#5af5f0]" />
-</button>
-        <button className="custom-next flex absolute right-4 box-shadow-lg bg-transparent border-[#5af5f0] text-transparent top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center transition">
-  <FaChevronRight className="text-[#5af5f0]" />
-</button>
-        <Swiper 
-          navigation={{ prevEl: '.custom-prev', nextEl: '.custom-next' }} 
+
+        <Swiper
+          navigation={true}
           modules={[Pagination, Navigation]}
           spaceBetween={36}
           slidesPerView={1}
@@ -78,7 +72,6 @@ const page = () => {
               allowTouchMove: false,
             },
           }}
-          
         >
           {cardData.map((card) => (
             <SwiperSlide key={card.title} className="flex Pillarsgroup p-1 mt-12 mb-12 md:px-10 justify-center">

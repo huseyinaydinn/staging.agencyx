@@ -44,7 +44,7 @@ export default function MatrixRainEffect() {
     function handleResize() {
       resizeCanvas();
       columns = Math.floor(canvas.width / fontSize);
-      drops = Array.from({ length: columns }).fill(1);
+      drops = Array.from({ length: columns }).map(() => Math.floor(Math.random() * (canvas.height / fontSize)));
     }
 
     window.addEventListener('resize', handleResize);

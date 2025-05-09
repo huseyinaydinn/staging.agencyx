@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
 
   useEffect(() => {
     // Loader'ı 2 saniye sonra kaldır
-    const timer = setTimeout(() => setLoading(false), 2000);
+    const timer = setTimeout(() => setLoading(false), 1500);
     return () => clearTimeout(timer); // Temizlik işlemi
   }, []);
 
