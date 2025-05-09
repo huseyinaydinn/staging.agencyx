@@ -5,6 +5,7 @@
   justify-content: center;
   border-radius: 9999px;
   background: #181a22;
+  z-index: 1; /* Ensure button is above its glow */
 }
 
 .heroButtonEffect::before, .heroButtonEffect::after {

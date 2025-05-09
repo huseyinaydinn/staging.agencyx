@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import HeroImage from "../../public/HeroImage.png";
 import { CiMicrophoneOn } from "react-icons/ci";
-import "./Hero.css";
 import "./HeroButtonEffect.css";
 import "./StarBackground.css";
 import MatrixRainEffect from "./MatrixRainEffect";
