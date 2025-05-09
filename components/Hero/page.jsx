@@ -7,6 +7,7 @@ import { CiMicrophoneOn } from "react-icons/ci";
 import "./Hero.css";
 import "./HeroButtonEffect.css";
 import "./StarBackground.css";
+import MatrixRainEffect from "./MatrixRainEffect";
 
 export default function LandingTR() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -55,7 +56,7 @@ export default function LandingTR() {
 
         {/* Hero Content */}
         <div className="relative w-full flex-1 flex flex-col items-center justify-center">
-
+        <MatrixRainEffect />
 
           {/* Content Container */}
           <div className="relative z-10 flex flex-col items-center gap-12 w-full h px-4">
@@ -77,6 +78,7 @@ export default function LandingTR() {
 
             {/* Image Container */}
             <div className="relative w-full max-w-4xl mx-auto [box-shadow:_0px_-80px_75px_-75px_rgba(34,18,133,0.8),30px_-20_30px_-5px_rgba(157,18,164,0.5)] rounded-2xl">
+              
               <Image
                 src={HeroImage}
                 alt="Dashboard Mockup"
