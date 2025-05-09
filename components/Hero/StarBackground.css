@@ -5,9 +5,8 @@
 
 .hero-bg {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  min-height: 100vh;
   background: #000000;
   overflow: hidden;
   position: relative;
@@ -18,7 +17,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 120vh;
+  height: 50vh;
   pointer-events: none;
   z-index: 0;
   transform: rotate(-45deg);
@@ -77,12 +76,6 @@
   50% { opacity: 0.6; }
 }
 
-@media screen and (max-width: 750px) {
-  .hero-bg {
-    min-height: 100vh;
-    font-size: 2rem;
-  }
-}
 
 .hero-bg .star:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s, 0s; }
 .hero-bg .star:nth-child(2) { top: 30%; left: 80%; animation-delay: 0.5s, 0.5s; }

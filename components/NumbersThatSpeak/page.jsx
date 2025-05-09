@@ -30,7 +30,7 @@ const stats = [
 const page = () => {
   return (
     <div className='bg-black'>
-          <section className="hero-bg flex flex-col items-center justify-center min-h-screen overflow-hidden pt-2 md:pt-4 pb-2 px-4 bg-black relative gap-5">
+          <section className="hero-bg flex flex-col items-center justify-center overflow-hidden py-2 md:py-12 px-4 bg-black relative gap-5">
               <div className="stars">
           <div className="star"></div>
           <div className="star"></div>
