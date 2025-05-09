@@ -61,9 +61,8 @@ export default function MatrixRainEffect() {
     function applyGradientMask() {
       if (!canvas) return;
       const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-      gradient.addColorStop(0, 'rgba(0,0,0,0.1)'); 
-      gradient.addColorStop(0.2, 'rgba(0,0,0,0.8)');
-      gradient.addColorStop(0.4, 'rgba(0,0,0,0.9'); // ortalara doğru yarı görünür
+      gradient.addColorStop(0, 'rgba(0,0,0,0.1)'); // üstte neredeyse tamamen şeffaf
+      gradient.addColorStop(0.4, 'rgba(0,0,0,0.8'); // ortalara doğru yarı görünür
       gradient.addColorStop(1, 'rgba(0,0,0,1)'); // altta tam görünür
       ctx.globalCompositeOperation = 'destination-in';
       ctx.fillStyle = gradient;
