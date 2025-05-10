@@ -23,10 +23,9 @@
   
   /* Drop shadow iyileştirmesi */
   [style*="drop-shadow"],
-  [class*="filter"],
-  [style*="filter"] {
-    -webkit-filter: drop-shadow(0 0 5px rgba(0,0,0,0.15));
-    filter: drop-shadow(0 0 5px rgba(0,0,0,0.15));
+  [style*="filter"],
+  [class*="filter"] {
+    filter: blur(8px) drop-shadow(0 0 12px rgba(0,0,0,0.18)) !important;
   }
 }
 
@@ -36,7 +35,7 @@
   .shadow-lg,
   .shadow-xl,
   [style*="box-shadow"] {
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06) !important;
+    box-shadow: 0 12px 32px 0 rgba(0,0,0,0.22), 0 6px 16px 0 rgba(0,0,0,0.16) !important;
   }
   
   /* Border yerine shadow kullan - bazen daha iyi performans gösterebilir */
@@ -63,11 +62,4 @@
 }
 
 /* iOS için parlaklık ve kontrast iyileştirmeleri */
-@supports (-webkit-touch-callout: none) {
-  [style*="box-shadow"],
-  [style*="shadow"],
-  [class*="shadow"] {
-    -webkit-filter: contrast(1.02) brightness(0.97);
-    filter: contrast(1.02) brightness(0.97);
-  }
-}
+/* iOS için kontrast ve parlaklık ayarları kaldırıldı, efektler daha net olacak */

@@ -94,7 +94,7 @@ export default function Registration() {
           <form className="flex flex-col items-start w-full h-[450px] min-h-[450px] relative">
             {/* Stepper */}
             <div className="w-full max-w-lg h-20 flex items-center justify-center flex-shrink-0 mx-auto mb-2 text-center">
-              <div className="flex w-full items-center justify-center flex-nowrap gap-x-4">
+              <div className="flex w-full items-center justify-center flex-nowrap gap-x-1 sm:gap-x-4 ">
                 {steps.map((step, idx) => (
                   <React.Fragment key={idx}>
                     {/* Step Circle */}
