@@ -40,15 +40,15 @@ export default function LandingTR() {
   </div>
   </button>
 </div>
-          <div className="flex flex-col items-center gap-4 z-10">
+          <div className="flex flex-col items-center gap-1 sm:gap-2 md:gap-4 z-10">
             {/* Heading */}
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-center text-white leading-tight mb-4">
+            <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold text-center text-white leading-tight mb-4">
               The All-In-One AI Platform
               <br />
               for Partners That Scale.
             </h1>
             {/* Description */}
-            <p className="max-w-2xl text-center text-gray-200 text-base px-2 md:text-xl font-extralight">
+            <p className="max-w-2xl text-center text-gray-200 text-xs px-2 md:text-xl font-extralight">
               Welcome to the platform built by AgencyX — where AI meets
               automation, voice meets action, and your brand enters the next
               era.
@@ -79,14 +79,14 @@ export default function LandingTR() {
             </div>
 
             {/* Image Container */}
-            <div className="relative w-full max-w-4xl mx-auto [box-shadow:_0px_-80px_75px_-75px_rgba(34,18,133,0.8),30px_-20_30px_-5px_rgba(157,18,164,0.5)] rounded-2xl">
+            <div className="relative w-full max-w-4xl mx-auto sm:[box-shadow:_0px_-80px_75px_-75px_rgba(34,18,133,0.8),30px_-20_30px_-5px_rgba(157,18,164,0.5)] rounded-2xl">
               
               <Image
                 src={HeroImage}
                 alt="Dashboard Mockup"
                 width={1200}
                 height={500}
-                className="relative z-10 w-full h-auto rounded-2xl border-t border-l border-r border-[#ffffff] hover:scale-102 transition-all duration-500"
+                className="relative z-10 w-screen h-[50vh] rounded-2xl border-t border-l border-r border-[rgba(53,51,116,0.8)] hover:scale-102 transition-all duration-500"
                 priority
               />
             </div>

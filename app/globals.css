@@ -74,16 +74,39 @@ button {
   right: 16px;
   top: 33%;
 }
+/* Swiper navigation custom style */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #477BFF;
+  border-radius: 9999px;
+  background: transparent;
+  min-width: 35px;
+  min-height: 35px;
+  box-shadow: 0 2px 8px #000a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+  z-index: 10;
+}
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  font-size: 10px;
+  font-size: 22px;
   color: #477BFF;
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background: #000000;
+  background: #23252C;
   color: #fff;
-  border-color: #477BFF;  
+  border-color: #fff;
+}
+.swiper-button-prev {
+  left: 16px;
+  top: 33%;
+}
+.swiper-button-next {
+  right: 16px;
+  top: 33%;
 }
 
 .swiper-pagination {

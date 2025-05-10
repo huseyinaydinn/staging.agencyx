@@ -6,7 +6,6 @@ import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import '../ValuePillars/ValuePillarsSwiper.css';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const cardData = [
   {
@@ -29,24 +28,7 @@ const cardData = [
   },
 ]
 
-const ArrowButton = ({ direction, onClick }) => (
-  <button
-    type="button"
-    onClick={onClick}
-    className={direction === 'prev'
-  ? ' custom-prev flex absolute left-4 box-shadow-lg bg-transparent text-transparent top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center transition'
-  : 'custom-next flex absolute right-4 box-shadow-lg bg-transparent text-transparent top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center transition'
-}
-    aria-label={direction === 'prev' ? 'Previous' : 'Next'}
-    style={{ pointerEvents: 'auto' }}
-  >
-    {direction === 'prev' ? (
-      <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" /></svg>
-    ) : (
-      <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
-    )}
-  </button>
-);
+
 
 const page = () => {
   const swiperRef = useRef(null);

@@ -57,11 +57,11 @@ export default function Founders() {
           Now it’s yours to use — and scale with.
         </h3>
         <div className="relative flex items-center">
-        <button className="custom-prev flex absolute left-2 box-shadow-lg bg-transparent border-[#5af5f0] text-transparent top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border items-center justify-center transition lg:hidden">
-  <FaChevronLeft className="text-[#5af5f0]" />
+        <button className="custom-prev flex absolute left-2 box-shadow-lg bg-transparent text-transparent top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border items-center justify-center transition lg:hidden">
+  <FaChevronLeft className="text-[#477BFF]" size={24} />
 </button>
-       <button className="custom-next flex absolute right-4 box-shadow-lg bg-transparent border-[#5af5f0] text-transparent top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center transition lg:hidden">
-  <FaChevronRight className="text-[#5af5f0]" />
+       <button className="custom-next flex absolute right-4 box-shadow-lg bg-transparent text-transparent top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center transition lg:hidden">
+  <FaChevronRight className="text-[#477BFF]" size={24}/>
 </button>
           <Swiper
             spaceBetween={8}
@@ -93,8 +93,10 @@ export default function Founders() {
                   <div className="group flex flex-col items-center">
                     {/* Kart */}
                     <div
-                      className={`flex flex-col justify-between mt-12 w-64 h-72 md:w-[200px] md:h-80 rounded-2xl border border-[#23252C] shadow-sm relative mx-auto bg-cover bg-center overflow-hidden cursor-pointer transition-all duration-300 active:shadow-2xl  hover:shadow-2xl ${borderClasses[colorIndex]} group-hover:scale-105`}
-                      style={{ backgroundImage: `url(${founder.image})`  }}
+                      className={`founder-card founder-card-${['green','blue','yellow','purple'][colorIndex]} flex flex-col justify-between mt-12 w-64 h-72 md:w-[200px] md:h-80 rounded-2xl border border-[#23252C] relative mx-auto bg-cover bg-center overflow-hidden cursor-pointer transition-all duration-300 active:shadow-2xl hover:shadow-2xl ${borderClasses[colorIndex]} group-hover:scale-105`}
+                      style={{
+  backgroundImage: `url(${founder.image})`
+}}
                     >
                       {/* Gradient overlay for better text visibility */}
                       <div className="absolute bottom-0 left-0 right-0 h-[150px] bg-gradient-to-t from-black/90 to-transparent z-0"></div>

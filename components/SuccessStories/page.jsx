@@ -57,9 +57,9 @@ export default function SuccessStories() {
         <button
           type="button"
           aria-label="Previous"
-          className="custom-prev flex border-[#5af5f0] absolute left-4 box-shadow-lg bg-transparent text-transparent top-1/3 -translate-y-1/2  z-10 w-10 h-10 rounded-full border items-center justify-center  transition" 
+          className="custom-prev flex absolute left-4 box-shadow-lg bg-transparent text-transparent top-1/3 -translate-y-1/2  z-10 w-10 h-10 rounded-full border items-center justify-center  transition" 
         >
-          <FaChevronLeft className="text-xl text-[#5af5f0]" />
+          <FaChevronLeft className="text-xl text-[#477BFF]" size={24} />
         </button>
         {/* Swiper */}
         <Swiper
@@ -127,9 +127,9 @@ export default function SuccessStories() {
         <button
           type="button"
           aria-label="Next"
-          className="custom-next flex border-[#5af5f0] absolute right-4 top-1/3 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center hover:bg-[#23252C] transition text-transparent bg-transparent" 
+          className="custom-next flex absolute right-4 top-1/3 -translate-y-1/2 z-10 w-10 h-10 rounded-full border items-center justify-center hover:bg-[#23252C] transition text-transparent bg-transparent" 
         >
-          <FaChevronRight className="text-xl text-[#5af5f0]" />
+          <FaChevronRight className="text-xl text-[#477BFF]" size={24} />
         </button>
         {/* Custom Swiper Pagination */}
         <div className="custom-success-pagination absolute left-0 right-0 bottom-0 flex items-center justify-center pb-2 z-20" />
