@@ -43,6 +43,7 @@ export default function RootLayout({ children }) {
       <Head>
         <title>Staging Agencyx</title>
         <meta name="description" content="Staging Agencyx" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </Head>
       <body
         className={`${cabin.variable} antialiased cursor-[url('/customCursor.png'),_auto]`}
