@@ -5,6 +5,7 @@ import Head from "next/head"; // Meta bilgileri için Head bileşeni
 import Loader from "../components/Loader";
 import { Cabin } from "next/font/google";
 import "./globals.css";
+import "./mobile-optimize.css"; // Mobil optimizasyon için eklendi
 import Navbar from "../components/Navbar/page";
 
 
@@ -46,7 +47,12 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </Head>
       <body
-        className={`${cabin.variable} antialiased cursor-[url('/customCursor.png'),_auto]`}
+        className={`${cabin.variable} antialiased cursor-[url('/customCursor.png'),_auto] bg-black`}
+        style={{
+          WebkitFontSmoothing: 'antialiased',
+          MozOsxFontSmoothing: 'grayscale',
+          WebkitTapHighlightColor: 'transparent'
+        }}
       >
         <Navbar />
         {children}
