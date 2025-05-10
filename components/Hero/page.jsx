@@ -86,7 +86,7 @@ export default function LandingTR() {
                 alt="Dashboard Mockup"
                 width={1200}
                 height={500}
-                className="relative z-10 w-screen h-[50vh] rounded-2xl border-t border-l border-r border-[rgba(53,51,116,0.8)] hover:scale-102 transition-all duration-500"
+                className="relative z-10 w-full h-auto rounded-2xl border-t border-l border-r border-[rgba(53,51,116,0.8)] hover:scale-102 transition-all duration-500"
                 priority
               />
             </div>
