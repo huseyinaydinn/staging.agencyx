@@ -5,7 +5,7 @@ const DemoStartButtons = () => {
     return (
         <section className="DemoStartSection flex flex-col items-center justify-center py-24 gap-10 bg-black bg-radial text-white demo-start-buttons-bg relative overflow-hidden">
             <DemoMatrixEffect />
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent z-10">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight bg-gradient-to-r from-white to-[#659BFF] bg-clip-text text-transparent z-10">
                 Ready to revolutionize <br /> your short-term rental business?
             </h2>
             <div className="flex flex-col items-center md:flex-row gap-2 md:gap-4 z-10 p-4 bg-transparent">

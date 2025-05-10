@@ -40,9 +40,9 @@ export default function LandingTR() {
   </div>
   </button>
 </div>
-          <div className="flex flex-col items-center gap-1 sm:gap-2 md:gap-4 z-10">
+          <div className="flex flex-col items-center gap-1 sm:gap-2 md:gap-4 z-10 cursor-none">
             {/* Heading */}
-            <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold text-center text-white leading-tight mb-4">
+            <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold text-center text-white leading-tight mb-4" >
               The All-In-One AI Platform
               <br />
               for Partners That Scale.

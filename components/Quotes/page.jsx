@@ -34,7 +34,7 @@ export default function QuotesCarousel() {
     setActiveIndex(swiper.realIndex);
   };
   return (
-    <section className="bg-w-full py-24 bg-black">
+    <section className="bg-w-full bg-black px-2 md:px-4 lg:px-12 py-8 md:py-12 xl:py-24">
       <div className="max-w-6xl mx-auto px-4">
         <Swiper
           modules={[Autoplay, Pagination]}

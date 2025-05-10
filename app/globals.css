@@ -40,6 +40,7 @@ button {
 
 
 
+
 /* Swiper navigation custom style */
 .swiper-button-next,
 .swiper-button-prev {
@@ -48,7 +49,6 @@ button {
   background: transparent;
   min-width: 35px;
   min-height: 35px;
-  box-shadow: 0 2px 8px #000a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,9 +62,7 @@ button {
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background: #23252C;
   color: #fff;
-  border-color: #fff;
 }
 .swiper-button-prev {
   left: 16px;
@@ -82,7 +80,6 @@ button {
   background: transparent;
   min-width: 35px;
   min-height: 35px;
-  box-shadow: 0 2px 8px #000a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,9 +93,7 @@ button {
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background: #23252C;
   color: #fff;
-  border-color: #fff;
 }
 .swiper-button-prev {
   left: 16px;

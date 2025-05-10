@@ -33,9 +33,9 @@ const cardData = [
 const page = () => {
   const swiperRef = useRef(null);
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center overflow-hidden py-6 md:py-12 pb-10 px-4 relative gap-12 bg-black" >
+    <section className="min-h-screen flex flex-col items-center justify-center overflow-hidden px-2 md:px-4 lg:px-12 py-8 md:py-12 xl:py-24 relative gap-2 sm:gap-4 md:gap-6 lg:gap-12" >
       <h2
-        className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight mb-4 bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent"
+        className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight mb-4 bg-gradient-to-r from-white to-[#659BFF] bg-clip-text text-transparent"
       >
         Value Pillars
       </h2>
@@ -44,8 +44,12 @@ const page = () => {
         <Swiper
           navigation={true}
           modules={[Pagination, Navigation]}
-          spaceBetween={0}
+          spaceBetween={20}
           slidesPerView={1}
+          pagination={{
+            el: '.custom-swiper-pagination',
+            clickable: true,
+          }}
           onSwiper={swiper => (swiperRef.current = swiper)}
           breakpoints={{
             768: {
@@ -89,6 +93,8 @@ const page = () => {
           ))}
           
         </Swiper>
+        {/* Custom pagination dots under the cards */}
+        <div className="custom-swiper-pagination flex justify-center mt-6" />
       </div>
     </section>
   )

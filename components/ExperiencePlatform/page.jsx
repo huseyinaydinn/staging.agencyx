@@ -5,10 +5,10 @@ import "./ExperiencePlatform.css";
 const Page = () => {
   return (
     
-          <section className="bg-black flex flex-col items-center justify-start  w-full py-8 sm:py-12 md:py-24 gap-4 md:gap-12">
+          <section className="bg-black flex flex-col items-center justify-center  w-full py-8 md:py-12 xl:py-24 gap-2 sm:gap-4 md:gap-6 lg:gap-12">
 
       {/* Başlık */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight bg-gradient-to-r from-white to-[#659BFF] bg-clip-text text-transparent">
         Experience Our Platform
       </h2>
 

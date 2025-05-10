@@ -7,9 +7,13 @@ import './ChooseScenario.css';
 
 const page = () => {
   return (
-    <section id="about" className="flex flex-col items-center justify-start py-4 md:py-12 px-1 bg-black">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 text-white">
-        Choose Your <span className="text-blue-200">Scenario</span>
+    <section id="about" className="flex flex-col items-center justify-start py-8 md:py-12 xl:py-24 px-1 sm:px-2 md:px-4 bg-black gap-2 sm:gap-4 md:gap-6 lg:gap-12">
+
+
+      <h2
+        className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight mb-4 bg-gradient-to-r from-white to-[#659BFF] bg-clip-text text-transparent"
+      >
+         Choose Your Scenario
       </h2>
       
       <div className="w-full max-w-6xl px-4 flex flex-col md:flex-row gap-4">

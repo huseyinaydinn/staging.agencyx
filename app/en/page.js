@@ -21,8 +21,8 @@ export default function LandingTR() {
       <ChooseScenario />
       <ExperiencePlatform />
       <DataTools />
-      <Quotes />
       <SpecificSolutions />
+      <Quotes />
       <SuccessStories />
       <Registration />
       <Founders />

@@ -8,14 +8,15 @@ import "./DataTools.css";
 
 const DataTools = () => {
   return (
-    <section id="how" className="flex flex-col items-center justify-center px-2 md:px-0 py-2 w-full h-full relative overflow-hidden bg-black">
+    <section id="how" className="min-h-screen flex flex-col items-center justify-center overflow-hidden px-2 md:px-4 lg:px-12 py-8 md:py-12 xl:py-24 relative gap-2 sm:gap-4 md:gap-6 lg:gap-12 bg-black">
       <div className=" absolute inset-0 w-full z-0 pointer-events-none">
 
       </div>
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-2 text-gray-100">
-        Every Tool <span className="text-blue-300">You Wish You Had</span>
+      <h2
+        className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight mb-4 bg-gradient-to-r from-white to-[#659BFF] bg-clip-text text-transparent"
+      >
+        Every Tool You Wish You Had <br />— Already Built
       </h2>
-      <h3 className="text-xl md:text-2xl font-light text-center mb-8 text-gray-300">— Already Built</h3>
       <div className="w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4  grid-rows-1 lg:grid-rows-2 gap-4">
         {/* AI Agents Card */}
         <div className="group bg-transparent border border-[#23252C] hover:border-blue-400/80 transition rounded-2xl p-5 flex flex-col lg:col-span-2 lg:row-span-2 min-h-[220px] lg:min-h-[280px] min-w-[180px] lg:min-w-[340px] relative overflow-hidden">

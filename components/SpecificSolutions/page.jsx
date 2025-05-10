@@ -19,12 +19,14 @@ const SpecificSolutions = () => {
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <section className="w-full flex flex-col items-center justify-center overflow-hidden py-2 md:py-6 px-4 bg-black relative gap-10">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight mb-2 bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent">
-        Industry-<span className="font-semibold">Specific <span className="text-blue-300">Solutions</span></span>
+    <section className="w-full flex flex-col items-center justify-center overflow-hidden py-2 md:py-6 px-2 bg-black relative gap-14">
+      <div className='flex flex-col items-center text-center gap-4'>
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight bg-gradient-to-r from-white to-[#659BFF] bg-clip-text text-transparent">
+      Industry-Specific Solutions
       </h2>
-      <div className="text-center text-xs md:text-base text-gray-400 mb-8 max-w-2xl mx-auto">
+      <p className="text-center text-xs md:text-base text-gray-400 mx-auto">
         This platform powers high-output teams across industries. See how real teams unlock next-level efficiency.
+      </p>
       </div>
       <div className="w-full relative overflow-hidden" style={{height:'500px'}}>
 
@@ -38,10 +40,12 @@ const SpecificSolutions = () => {
               768: {
                 slidesPerView: 2,
               },
-              1100: {
+
+              1024: {
                 slidesPerView: 3,
               },
-              1600: {
+
+              1280: {
                 slidesPerView: 4,
               },
             }
@@ -54,7 +58,7 @@ const SpecificSolutions = () => {
         >
           {/* Hospitality Card */}
           <SwiperSlide className="flex" style={{height:CARD_HEIGHT, minHeight:CARD_HEIGHT, alignItems:'center'}}>
-            <div className="w-[352px]  bg-black border border-[#273043] rounded-xl py-6 md:py-8 flex flex-col gap-6 shadow-sm shadow-gray-800  mx-auto relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_32px_0_rgba(80,120,255,0.18)] focus:shadow-[0_0_32px_0_rgba(80,120,255,0.18)]" style={{height:CARD_HEIGHT, minHeight:CARD_HEIGHT}}>
+            <div className="max-w-[332px] bg-black border border-[#273043] rounded-xl py-6 md:py-8 flex flex-col gap-6 shadow-sm shadow-gray-800  mx-auto relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_32px_0_rgba(80,120,255,0.18)] focus:shadow-[0_0_32px_0_rgba(80,120,255,0.18)]" style={{height:CARD_HEIGHT, minHeight:CARD_HEIGHT}}>
               <div className="absolute left-0 top-0 w-2/3 h-2/3 pointer-events-none z-0"
                 style={{
                   background: 'radial-gradient(circle at -10% -10%, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 50%, transparent 100%)',
@@ -84,7 +88,7 @@ const SpecificSolutions = () => {
           </SwiperSlide>
           {/* Retail Card */}
           <SwiperSlide className="flex" style={{height:CARD_HEIGHT, minHeight:CARD_HEIGHT, alignItems:'center'}}>
-            <div className="w-[352px]  bg-black border border-[#273043] rounded-xl py-6 md:py-8 flex flex-col gap-6 shadow-sm shadow-gray-800   mx-auto relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_32px_0_rgba(80,120,255,0.18)] focus:shadow-[0_0_32px_0_rgba(80,120,255,0.18)]" style={{height:CARD_HEIGHT, minHeight:CARD_HEIGHT}}>
+            <div className="max-w-[332px] bg-black border border-[#273043] rounded-xl py-6 md:py-8 flex flex-col gap-6 shadow-sm shadow-gray-800   mx-auto relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_32px_0_rgba(80,120,255,0.18)] focus:shadow-[0_0_32px_0_rgba(80,120,255,0.18)]" style={{height:CARD_HEIGHT, minHeight:CARD_HEIGHT}}>
               <div className="absolute left-0 top-0 w-2/3 h-2/3 pointer-events-none z-0"
                 style={{
                   background: 'radial-gradient(circle at -10% -10%, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 50%, transparent 100%)',
@@ -114,7 +118,7 @@ const SpecificSolutions = () => {
           </SwiperSlide>
           {/* Finance Card */}
           <SwiperSlide className="flex" style={{height:CARD_HEIGHT, minHeight:CARD_HEIGHT, alignItems:'center'}}>
-            <div className="w-[352px]  bg-black border border-[#273043] rounded-xl py-6 md:py-8 flex flex-col gap-6 shadow-sm shadow-gray-800  mx-auto relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_32px_0_rgba(80,120,255,0.18)] focus:shadow-[0_0_32px_0_rgba(80,120,255,0.18)]" style={{height:CARD_HEIGHT, minHeight:CARD_HEIGHT}}>
+            <div className="max-w-[332px] bg-black border border-[#273043] rounded-xl py-6 md:py-8 flex flex-col gap-6 shadow-sm shadow-gray-800  mx-auto relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_32px_0_rgba(80,120,255,0.18)] focus:shadow-[0_0_32px_0_rgba(80,120,255,0.18)]" style={{height:CARD_HEIGHT, minHeight:CARD_HEIGHT}}>
               <div className="absolute left-0 top-0 w-2/3 h-2/3 pointer-events-none z-0"
                 style={{
                   background: 'radial-gradient(circle at -10% -10%, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 50%, transparent 100%)',
@@ -144,7 +148,7 @@ const SpecificSolutions = () => {
           </SwiperSlide>
           {/* Marketing Agencies Card */}
           <SwiperSlide className="flex" style={{height:CARD_HEIGHT, minHeight:CARD_HEIGHT, alignItems:'center'}}>
-            <div className="w-[352px]  bg-black border border-[#273043] rounded-xl py-6 md:py-8 flex flex-col gap-6 shadow-sm shadow-gray-800  mx-auto relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_32px_0_rgba(80,120,255,0.18)] focus:shadow-[0_0_32px_0_rgba(80,120,255,0.18)]" style={{height:CARD_HEIGHT, minHeight:CARD_HEIGHT}}>
+            <div className="max-w-[332px] bg-black border border-[#273043] rounded-xl py-6 md:py-8 flex flex-col gap-6 shadow-sm shadow-gray-800  mx-auto relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_32px_0_rgba(80,120,255,0.18)] focus:shadow-[0_0_32px_0_rgba(80,120,255,0.18)]" style={{height:CARD_HEIGHT, minHeight:CARD_HEIGHT}}>
               <div className="absolute left-0 top-0 w-2/3 h-2/3  pointer-events-none z-0"
                 style={{
                   background: 'radial-gradient(circle at -10% -10%, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 50%, transparent 100%)',

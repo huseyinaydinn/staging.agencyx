@@ -45,11 +45,11 @@ export default function SuccessStories() {
   return (
     
         <section
-      className="SuccessBgEffect bg-black w-full flex flex-col items-center justify-center py-2 md:py-4 px-2 md:px-6"
+      className="SuccessBgEffect bg-black w-full flex flex-col items-center justify-center px-2 md:px-4 lg:px-12 py-8 md:py-12 xl:py-24 gap-2 sm:gap-4 md:gap-6 lg:gap-12"
     >
       {/* ShootingStars arka plan efekti */}
       <ShootingStars />
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight mb-12 bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight bg-gradient-to-r from-white to-[#659BFF] bg-clip-text text-transparent">
         Success <span className="font-normal">Stories</span>
       </h2>
       <div className="w-full max-w-7xl  relative flex items-center justify-center pb-12 px-1">
@@ -85,7 +85,7 @@ export default function SuccessStories() {
             <SwiperSlide
   key={idx}
   className="flex items-center justify-center rounded-2xl"
->              <div className=" flex flex-col w-3/4  md:max-w-[560px] h-[575px] rounded-2xl bg-[rgba(0,0,0,0.01)] border border-[#23252C] shadow-lg p-6 md:p-8 relative mx-auto backdrop-blur-sm" style={{boxShadow: '0 2px 12px 0 rgba(63,105,255,0.10), inset 0 8px 32px 0 rgba(255,255,255,0.08)'}}>
+>              <div className=" flex flex-col w-3/4  md:max-w-[560px] h-[575px] rounded-2xl bg-[rgba(0,0,0,0.01)] border border-[#23252C] shadow-lg px-2 md:p-4 relative mx-auto backdrop-blur-sm" style={{boxShadow: '0 2px 12px 0 rgba(63,105,255,0.10), inset 0 8px 32px 0 rgba(255,255,255,0.08)'}}>
                 <div className="text-[17px] md:text-lg text-white font-normal mb-4 tracking-tight">{story.title}</div>
                 <div className="w-full h-[170px] md:h-[160px] rounded-xl overflow-hidden mb-5">
                   <img src={story.image} alt={story.title} className="object-cover w-full h-full" />

@@ -76,7 +76,7 @@ export default function Registration() {
 
   return (
     <section
-      className="min-h-screen w-full flex flex-col items-center justify-center relative px-2"
+      className="min-h-screen w-full flex flex-col items-center justify-center relative px-2 md:px-4 lg:px-12 py-8 md:py-12 xl:py-24 gap-2 sm:gap-4 md:gap-6 lg:gap-12"
       style={{
         backgroundImage: "url('/Registration/Registration.jpg')",
         backgroundSize: 'cover',

@@ -47,15 +47,17 @@ const founders = [
 
 export default function Founders() {
   return (
-    <section className="py-16 bg-black">
+    <section className="min-h-screen flex flex-col items-center justify-center overflow-hidden px-2 md:px-4 lg:px-12 py-8 md:py-12 xl:py-24 relative gap-2 sm:gap-4 md:gap-6 lg:gap-12 bg-black">
       <div className="max-w-6xl mx-auto px-4 flex flex-col gap-8">
-        <h2 className="text-center text-lg md:text-xl font-extralight text-gray-500 mb-4">
+  <div className="flex flex-col items-center text-center gap-4">
+  <h2 className="text-center text-lg md:text-xl font-extralight text-gray-500">
           The Founders Behind the Platform the Market Was Missing.
         </h2>
-        <h3 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight bg-gradient-to-r from-white to-[#659BFF] bg-clip-text text-transparent">
           We didn’t build this to chase trends. We built it because nothing else worked the way we needed.<br />
           Now it’s yours to use — and scale with.
         </h3>
+  </div>
         <div className="relative flex items-center">
         <button className="custom-prev flex absolute left-2 box-shadow-lg bg-transparent text-transparent top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border items-center justify-center transition lg:hidden">
   <FaChevronLeft className="text-[#477BFF]" size={24} />

@@ -29,8 +29,7 @@ const stats = [
 
 const page = () => {
   return (
-    <div className='bg-black'>
-          <section className="hero-bg flex flex-col items-center justify-center overflow-hidden py-2 md:py-12 px-4 bg-black relative gap-5">
+          <section className="hero-bg flex flex-col items-center justify-center overflow-hidden py-2 md:py-4 lg:py-12 px-2 md:px-4 bg-black relative gap-4 md:gap-8">
               <div className="stars">
           <div className="star"></div>
           <div className="star"></div>
@@ -49,10 +48,10 @@ const page = () => {
 
           <div className="star"></div>
         </div>
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight mb-10 bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight bg-gradient-to-r from-white to-[#659BFF] bg-clip-text text-transparent">
         Numbers that speak
       </h2>
-      <div className="flex flex-col md:flex-row gap-7 w-full max-w-5xl justify-center items-stretch py-6 px-2 ">
+      <div className="flex flex-col md:flex-row gap-7 w-full max-w-5xl justify-center items-stretch px-2 ">
         {stats.map((stat, idx) => (
           <div
             key={stat.label}
@@ -69,7 +68,6 @@ const page = () => {
         ))}
       </div>
     </section>
-    </div>
   )
 }
 
