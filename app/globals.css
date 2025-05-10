@@ -8,7 +8,7 @@
 body {
   background: black;
   color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-cabin) , sans-serif;
 }
 
 button {
@@ -43,8 +43,7 @@ button {
 /* Swiper navigation custom style */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #5af5f0;
-  border: 1.5px solid #5af5f0;
+  color: #477BFF;
   border-radius: 9999px;
   background: transparent;
   min-width: 35px;
@@ -59,7 +58,7 @@ button {
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-size: 22px;
-  color: #5af5f0;
+  color: #477BFF;
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
@@ -78,11 +77,29 @@ button {
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-size: 10px;
-  color: #5af5f0;
+  color: #477BFF;
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   background: #000000;
   color: #fff;
-  border-color: #5af5f0;  
+  border-color: #477BFF;  
 }
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+  }
+  .swiper-pagination-bullet {
+    width: 18px;
+    height: 5px;
+    border-radius: 0;
+    background-color: rgba(164, 240, 247, 1);
+    border-radius: 15px;
+    transition: all 1s;
+  }
+  .swiper-pagination-bullet-active {
+    width: 56px;
+    background-color: rgb(38, 140, 224);
+    transition: all 1s;
+  }

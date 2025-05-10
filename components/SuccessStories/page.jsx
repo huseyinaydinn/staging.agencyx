@@ -5,9 +5,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { FaArrowRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { FaAnglesRight } from 'react-icons/fa6';
+import {FaAngleRight} from 'react-icons/fa';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import '../SuccessStories/SuccessBgStars.css';
+import ShootingStars from './ShootingStars';
+import './ShootingStars.css';
 
 const stories = [
   {
@@ -39,20 +43,12 @@ const stories = [
 export default function SuccessStories() {
   const swiperRef = useRef(null);
   return (
-    <div className='bg-black'>
+    
         <section
-      className="hero-bg  w-full flex flex-col items-center justify-center py-2 md:py-4 px-2 md:px-6"
+      className="SuccessBgEffect bg-black w-full flex flex-col items-center justify-center py-2 md:py-4 px-2 md:px-6"
     >
-                    <div className="stars">
-          <div className="star"></div>
-          <div className="star"></div>
-
-          <div className="star"></div>
-          <div className="star"></div>
-          <div className="star"></div>
-
-          <div className="star"></div>
-        </div>
+      {/* ShootingStars arka plan efekti */}
+      <ShootingStars />
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight mb-12 bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent">
         Success <span className="font-normal">Stories</span>
       </h2>
@@ -68,14 +64,19 @@ export default function SuccessStories() {
         {/* Swiper */}
         <Swiper
           modules={[Navigation, Pagination]}
-          spaceBetween={100}
-          breakpoints
           slidesPerView={1}
           loop={true}
           navigation={{ prevEl: '.custom-prev', nextEl: '.custom-next' }}
-          breakpoints={{
-            768: { slidesPerView: 2 },
-          }}
+          breakpoints={
+            {
+            0:{
+              spaceBetween: 50,
+            },
+            1024:{
+              slidesPerView: 2, spaceBetween: -100,
+            },
+          }
+          }
           pagination={{ clickable: true, dynamicBullets: true, el: '.custom-success-pagination' }}
           onSwiper={swiper => (swiperRef.current = swiper)}
           className="w-full"
@@ -84,7 +85,7 @@ export default function SuccessStories() {
             <SwiperSlide
   key={idx}
   className="flex items-center justify-center rounded-2xl"
->              <div className=" flex flex-col w-full  md:max-w-[560px] rounded-2xl bg-[rgba(0,0,0,0.01)] border border-[#23252C] shadow-lg p-6 md:p-8 relative mx-auto backdrop-blur-sm" style={{boxShadow: '0 2px 12px 0 rgba(63,105,255,0.10), inset 0 8px 32px 0 rgba(255,255,255,0.08)'}}>
+>              <div className=" flex flex-col w-3/4  md:max-w-[560px] h-[575px] rounded-2xl bg-[rgba(0,0,0,0.01)] border border-[#23252C] shadow-lg p-6 md:p-8 relative mx-auto backdrop-blur-sm" style={{boxShadow: '0 2px 12px 0 rgba(63,105,255,0.10), inset 0 8px 32px 0 rgba(255,255,255,0.08)'}}>
                 <div className="text-[17px] md:text-lg text-white font-normal mb-4 tracking-tight">{story.title}</div>
                 <div className="w-full h-[170px] md:h-[160px] rounded-xl overflow-hidden mb-5">
                   <img src={story.image} alt={story.title} className="object-cover w-full h-full" />
@@ -111,11 +112,11 @@ export default function SuccessStories() {
                 </div>
                 <a
                   href={story.link}
-                  className="mt-auto w-full sm:w-1/2 flex items-center justify-center gap-0 sm:gap-2 rounded-xl px-0 py-0 h-[46px] bg-blue-600 hover:bg-blue-500 transition shadow-none text-[#fff]"
+                  className="mt-auto w-full sm:w-1/2 flex items-center justify-center gap-2 rounded-xl px-0 py-4 h-[46px] bg-blue-600 hover:bg-blue-500 transition shadow-none text-[#fff]"
                   style={{boxShadow:'0 2px 12px 0 rgba(63,105,255,0.10)'}}
                 >
                   <span className="flex items-center justify-center text-center gap-2 w-full h-full text-xs sm:text-sm font-medium">
-                    Read full case study <FaArrowRight className="ml-1 text-[16px]" />
+                    Read full case study <FaAngleRight  className="ml-1 text-[16px]" />
                   </span>
                 </a>
               </div>
@@ -134,6 +135,5 @@ export default function SuccessStories() {
         <div className="custom-success-pagination absolute left-0 right-0 bottom-0 flex items-center justify-center pb-2 z-20" />
       </div>
     </section>
-    </div>
   );
 }

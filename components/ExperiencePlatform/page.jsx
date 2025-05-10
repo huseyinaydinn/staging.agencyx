@@ -4,17 +4,9 @@ import "./ExperiencePlatform.css";
 
 const Page = () => {
   return (
-    <div className="bg-black">
-          <section className="hero-bg ExperiencePlatform flex flex-col items-center justify-start  w-full p-2 md:p-4 gap-4 md:gap-12">
-                 <div className="stars">
-          <div className="star"></div>
-          <div className="star"></div>
-          <div className="star"></div>
-          <div className="star"></div>
-          <div className="star"></div>
-          <div className="star"></div>
-          
-        </div>
+    
+          <section className="bg-black flex flex-col items-center justify-start  w-full py-8 sm:py-12 md:py-24 gap-4 md:gap-12">
+
       {/* Başlık */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-center leading-tight bg-gradient-to-r from-white to-[#A6CCFF] bg-clip-text text-transparent">
         Experience Our Platform
@@ -45,7 +37,7 @@ const Page = () => {
       </button>
     </div>
     </section>
-    </div>
+    
   );
 };
 

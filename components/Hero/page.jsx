@@ -17,7 +17,7 @@ export default function LandingTR() {
       <MatrixRainEffect />
       
       {/* Hero Section */}
-      <div className="hero-bg el flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-32 pb-10 px-4 bg-black relative gap-12">
+      <div className="hero-bg flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-32 pb-10 px-4 bg-black relative gap-12">
         <div className="stars">
           <div className="star"></div>
           <div className="star"></div>

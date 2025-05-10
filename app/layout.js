@@ -3,18 +3,16 @@
 import { useState, useEffect } from "react";
 import Head from "next/head"; // Meta bilgileri için Head bileşeni
 import Loader from "../components/Loader";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cabin } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar/page";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+
+const cabin = Cabin({
+  variable: "--font-cabin",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 import ScrollToTopButton from '../components/ScrollToTopButton';
@@ -47,7 +45,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content="Staging Agencyx" />
       </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased cursor-[url('/customCursor.png'),_auto]`}
+        className={`${cabin.variable} antialiased cursor-[url('/customCursor.png'),_auto]`}
       >
         <Navbar />
         {children}

@@ -7,7 +7,7 @@ import './ChooseScenario.css';
 
 const page = () => {
   return (
-    <section id="about" className="min-h-screen flex flex-col items-center justify-start pt-12 bg-black">
+    <section id="about" className="flex flex-col items-center justify-start py-4 md:py-12 px-1 bg-black">
       <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 text-white">
         Choose Your <span className="text-blue-200">Scenario</span>
       </h2>

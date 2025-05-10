@@ -12,8 +12,6 @@ import { BsCurrencyDollar } from 'react-icons/bs';
 import { FiShoppingBag } from 'react-icons/fi';
 import { FiHome } from 'react-icons/fi';
 import { BsCursor } from 'react-icons/bs';
-import { FaChevronLeft } from 'react-icons/fa';
-import { FaChevronRight } from 'react-icons/fa';
 
 const CARD_HEIGHT = '480px'; // Yüksekliği sabitlemek için
 
@@ -178,7 +176,7 @@ const SpecificSolutions = () => {
           
         </Swiper>
         <div className="flex justify-center mt-6 lg:hidden">
-          <div className="swiper-pagination custom-swiper-pagination block lg:hidden"></div>
+          <div className="swiper-pagination block lg:hidden"></div>
         </div>
       </div>
     </section>
